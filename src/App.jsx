@@ -1,3 +1,7 @@
+import petikAwal from "./assets/images/petik-awal.png";
+import petikAkhir from "./assets/images/petik-akhir.png";
+import bgSection2 from "./assets/images/bg-section-2.png";
+
 function App() {
   return (
     <div>
@@ -42,6 +46,7 @@ function App() {
           </li>
         </ul>
       </header>
+      {/* section 1 */}
       <section>
         <div className="pt-[115px] pb-[74px] bg-[#111524] flex flex-col items-center justify-center">
           <div className="flex gap-[6px]">
@@ -59,6 +64,31 @@ function App() {
           <h1 className="font-bold font-Tommorow text-[64px] text-center">
             ITECH POLIBAN <br /> COMPETITION 2024
           </h1>
+        </div>
+      </section>
+      {/* section 2 */}
+      <section>
+        <div
+          className="bg-cover bg-center h-screen"
+          style={{ backgroundImage: `url(${bgSection2})` }}
+        >
+          <div className="pt-10">
+            <img
+              src={petikAwal}
+              className="absolute left-[305px] top-[476px] font-bold text-[32px] text-black"
+              alt=""
+            />
+            <h2 className="font-Merriweather font-light italic text-[32px] text-white text-center">
+              Peran Pemuda dalam Menjaga Keberagaman <br />
+              Budaya di
+              <span className="font-bold"> Era Kecerdasan Buatan</span>
+            </h2>
+            <img
+              src={petikAkhir}
+              className="absolute right-[386px] top-[562px] font-bold text-[32px] text-black"
+              alt=""
+            />
+          </div>
         </div>
       </section>
     </div>
