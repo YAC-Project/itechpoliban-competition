@@ -1,21 +1,70 @@
 import petikAwal from "./assets/images/petik-awal.png";
 import petikAkhir from "./assets/images/petik-akhir.png";
 import bgSection2 from "./assets/images/bg-section-2.png";
+import { useEffect } from "react";
+import { useState } from "react";
+import bgHero from "./assets/images/bg-hero.png";
 
 function App() {
+  const [timeLeft, setTimeLeft] = useState({
+    days: 0,
+    hours: 0,
+    minutes: 0,
+    seconds: 0,
+  });
+
+  useEffect(() => {
+    // Set the target date for the countdown
+    const targetDate = new Date("2024-10-20 00:00:00").getTime(); // Example: December 1st, 2024
+
+    const interval = setInterval(() => {
+      const now = new Date().getTime();
+      const distance = targetDate - now;
+
+      // Calculate time remaining
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor(
+        (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+      );
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      // Update the state
+      setTimeLeft({
+        days,
+        hours,
+        minutes,
+        seconds,
+      });
+
+      // If the countdown is over, stop the timer
+      if (distance < 0) {
+        clearInterval(interval);
+        setTimeLeft({
+          days: 0,
+          hours: 0,
+          minutes: 0,
+          seconds: 0,
+        });
+      }
+    }, 1000);
+
+    // Clear the interval when the component unmounts
+    return () => clearInterval(interval);
+  }, []);
   return (
     <div>
-      <header className="fixed top-0 w-full">
+      <header className="fixed top-0 w-full z-10">
         <ul className="hidden sm:flex w-[650px] mx-auto rounded-b-lg justify-center items-center gap-6 sm:gap-12 min-h-[68px] bg-white/10 backdrop-blur-sm backdrop-opacity-70">
           <li className="relative after:content-[''] after:w-full after:h-0.5 after:bg-white after:absolute after:-bottom-1 after:left-0 after:transition-all after:duration-300 after:ease-in-out after:transform after:scale-x-[.6]">
-            <a href="#beranda" className="font-medium">
+            <a href="#beranda" className="font-medium text-white">
               Beranda
             </a>
           </li>
           <li>
             <a
               href="#tentang"
-              className="font-light relative after:content-[''] after:w-full after:h-0.5 after:bg-white after:absolute after:-bottom-1 after:left-0 after:transition-all after:duration-300 after:ease-in-out after:transform after:scale-x-0 after:hover:scale-x-[.6]"
+              className="font-light relative after:content-[''] after:w-full after:h-0.5 after:bg-white after:absolute after:-bottom-1 after:left-0 after:transition-all after:duration-300 after:ease-in-out after:transform after:scale-x-0 after:hover:scale-x-[.6] text-white"
             >
               Tentang
             </a>
@@ -23,7 +72,7 @@ function App() {
           <li>
             <a
               href="#kategori"
-              className="font-light relative after:content-[''] after:w-full after:h-0.5 after:bg-white after:absolute after:-bottom-1 after:left-0 after:transition-all after:duration-300 after:ease-in-out after:transform after:scale-x-0 after:hover:scale-x-[.6]"
+              className="font-light relative after:content-[''] after:w-full after:h-0.5 after:bg-white after:absolute after:-bottom-1 after:left-0 after:transition-all after:duration-300 after:ease-in-out after:transform after:scale-x-0 after:hover:scale-x-[.6] text-white"
             >
               Kategori
             </a>
@@ -31,7 +80,7 @@ function App() {
           <li>
             <a
               href="#timeline"
-              className="font-light relative after:content-[''] after:w-full after:h-0.5 after:bg-white after:absolute after:-bottom-1 after:left-0 after:transition-all after:duration-300 after:ease-in-out after:transform after:scale-x-0 after:hover:scale-x-[.6]"
+              className="font-light relative after:content-[''] after:w-full after:h-0.5 after:bg-white after:absolute after:-bottom-1 after:left-0 after:transition-all after:duration-300 after:ease-in-out after:transform after:scale-x-0 after:hover:scale-x-[.6] text-white"
             >
               Timeline
             </a>
@@ -39,17 +88,98 @@ function App() {
           <li>
             <a
               href="#kontak"
-              className="font-light relative after:content-[''] after:w-full after:h-0.5 after:bg-white after:absolute after:-bottom-1 after:left-0 after:transition-all after:duration-300 after:ease-in-out after:transform after:scale-x-0 after:hover:scale-x-[.6]"
+              className="font-light relative after:content-[''] after:w-full after:h-0.5 after:bg-white after:absolute after:-bottom-1 after:left-0 after:transition-all after:duration-300 after:ease-in-out after:transform after:scale-x-0 after:hover:scale-x-[.6] text-white"
             >
               Kontak
             </a>
           </li>
         </ul>
+
+        <div className="flex sm:hidden items-center justify-between min-h-[68px] bg-white/10 backdrop-blur-sm backdrop-opacity-70">
+          <h1 className="sm:hidden font-bold text-white text-lg ml-6 font-Sarabun">
+            ITECH POLIBAN COMPETITION
+          </h1>
+          <div class="sm:hidden z-10 mr-6">
+            <input type="checkbox" id="menu-toggle" class="hidden" />
+            <label
+              for="menu-toggle"
+              id="menu-toggle"
+              class="btn btn-square btn-ghost cursor-pointer"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                class="inline-block w-6 h-6 stroke-current"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h16M4 18h16"
+                ></path>
+              </svg>
+            </label>
+            <div
+              id="menu"
+              class="dropdown-content absolute right-0 mt-3 p-2 shadow bg-base-100 rounded-box w-full hidden z-10"
+            >
+              <ul class="flex flex-col items-center gap-6 py-2 z-10">
+                <li>
+                  <a
+                    href="/"
+                    class="relative text-xl after:content-[''] after:w-full after:h-0.5 after:bg-white after:absolute after:-bottom-2 after:left-0 after:transition-all after:duration-300 after:ease-in-out after:transform after:scale-x-75 z-30"
+                  >
+                    Beranda
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#tentang"
+                    class="relative text-xl after:content-[''] after:w-full after:h-0.5 after:bg-white after:absolute after:-bottom-2 after:left-0 after:transition-all after:duration-300 after:ease-in-out after:transform after:scale-x-0 after:hover:scale-x-75  z-30"
+                  >
+                    Tentang
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#kategori"
+                    class="relative text-xl after:content-[''] after:w-full after:h-0.5 after:bg-white after:absolute after:-bottom-2 after:left-0 after:transition-all after:duration-300 after:ease-in-out after:transform after:scale-x-0 after:hover:scale-x-75"
+                  >
+                    Kategori
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#timeline"
+                    class="relative text-xl after:content-[''] after:w-full after:h-0.5 after:bg-white after:absolute after:-bottom-2 after:left-0 after:transition-all after:duration-300 after:ease-in-out after:transform after:scale-x-0 after:hover:scale-x-75"
+                  >
+                    Timeline
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#kontak"
+                    class="relative text-xl after:content-[''] after:w-full after:h-0.5 after:bg-white after:absolute after:-bottom-2 after:left-0 after:transition-all after:duration-300 after:ease-in-out after:transform after:scale-x-0 after:hover:scale-x-75"
+                  >
+                    Kontak
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
       </header>
-      {/* section 1 */}
-      <section>
+      <section className="relative">
+        <div className="absolute w-full h-full z-0">
+          <img
+            src={bgHero}
+            className="w-full h-full object-cover object-center"
+          />
+        </div>
+        <div className="absolute bg-black/100 w-full h-full z-0 inset-0 bg-gradient-to-l from-black/80 via-[#8ac6ffa1] to-black/80   opacity-90"></div>
         <div className="pt-[115px] pb-[74px] bg-[#111524] flex flex-col items-center justify-center">
-          <div className="flex gap-[6px]">
+          <div className="flex gap-[6px] z-0">
             <img
               src="src/assets/images/svg/logo-poliban.svg"
               alt="Logo Poliban"
@@ -61,9 +191,103 @@ function App() {
               className="w-16 h-16"
             />
           </div>
-          <h1 className="font-bold font-Tommorow text-[64px] text-center">
-            ITECH POLIBAN <br /> COMPETITION 2024
-          </h1>
+          <div className="relative">
+            <h1
+              className="font-bold font-Tommorow text-[40px] sm:text-[64px] text-center px-2"
+              id="heading-hero-stroke"
+            >
+              ITECH POLIBAN <br /> COMPETITION 2024
+            </h1>
+            <h1
+              className="font-bold font-Tommorow text-[40px] sm:text-[64px] text-center absolute top-[5px] left-[9px] text-white"
+              id="heading-hero"
+            >
+              ITECH POLIBAN COMPETITION 2024
+            </h1>
+          </div>
+          <p className="font-Sarabun text-lg sm:text-xl text-center text-white mt-1 z-0">
+            Ayo, tunjukkan kreativitas dan inovasimu! <br />{" "}
+            <span className="font-bold">
+              Daftarkan tim atau dirimu sekarang
+            </span>{" "}
+            dan buktikan bahwa kalian <br /> bisa membuat perubahan!
+          </p>
+          <div className="flex gap-[14px] mt-6 z-20">
+            <div className="flex flex-col items-center justify-center gap-2  font-Sarabun">
+              <span className="text-[#4B6C8C] font-medium text-[24px] sm:text-[32px] bg-white p-4 rounded-xl countdown">
+                <span style={{ "--value": timeLeft.days }}></span>
+              </span>
+              <span className="font-medium text-[13px] text-white">Hari</span>
+            </div>
+            <div className="mt-5">
+              <svg
+                width="10"
+                height="28"
+                viewBox="0 0 10 28"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle cx="5" cy="5" r="5" fill="white" />
+                <circle cx="5" cy="23" r="5" fill="white" />
+              </svg>
+            </div>
+            <div className="flex flex-col items-center justify-center gap-2  font-Sarabun">
+              <span className="countdown text-[#4B6C8C] font-medium text-[24px] sm:text-[32px] bg-white p-4 rounded-xl">
+                <span style={{ "--value": timeLeft.hours }}></span>
+              </span>
+              <span className="font-medium text-[13px] text-white">Jam</span>
+            </div>
+            <div className="mt-5">
+              <svg
+                width="10"
+                height="28"
+                viewBox="0 0 10 28"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle cx="5" cy="5" r="5" fill="white" />
+                <circle cx="5" cy="23" r="5" fill="white" />
+              </svg>
+            </div>
+            <div className="flex flex-col items-center justify-center gap-2  font-Sarabun">
+              <span className="countdown text-[#4B6C8C] font-medium text-[24px] sm:text-[32px] bg-white p-4 rounded-xl">
+                <span style={{ "--value": timeLeft.minutes }}></span>
+              </span>
+              <span className="font-medium text-[13px] text-white">Menit</span>
+            </div>
+            <div className="mt-5">
+              <svg
+                width="10"
+                height="28"
+                viewBox="0 0 10 28"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle cx="5" cy="5" r="5" fill="white" />
+                <circle cx="5" cy="23" r="5" fill="white" />
+              </svg>
+            </div>
+            <div className="flex flex-col items-center justify-center gap-2  font-Sarabun">
+              <span className="countdown text-[#4B6C8C] font-medium text-[24px] sm:text-[32px] bg-white p-4 rounded-xl">
+                <span style={{ "--value": timeLeft.seconds }}></span>
+              </span>
+              <span className="font-medium text-[13px] text-white">Detik</span>
+            </div>
+          </div>
+          <div className="font-Sarabun mt-[22px] flex gap-[10px] z-20">
+            <a
+              href="#"
+              className="btn px-[14px] py-[10px] bg-[#FFB800] border-none shadow-md hover:bg-[#ffc936] text-white rounded-lg"
+            >
+              Download Panduan
+            </a>
+            <a
+              href="#"
+              className="btn bg-[#8AC7FF] px-[34px] py-[10px] text-white rounded-lg border-none shadow-md hover:bg-[#81c2ff]"
+            >
+              Mau Daftar
+            </a>
+          </div>
         </div>
       </section>
       {/* section 2 */}
@@ -72,10 +296,10 @@ function App() {
           className="bg-cover bg-center h-screen"
           style={{ backgroundImage: `url(${bgSection2})` }}
         >
-          <div className="pt-10">
+          <div className="pt-10 relative">
             <img
               src={petikAwal}
-              className="absolute left-[305px] top-[476px] font-bold text-[32px] text-black"
+              className="absolute left-[258px] top-[34px] font-bold text-[32px] text-black"
               alt=""
             />
             <h2 className="font-Merriweather font-light italic text-[32px] text-white text-center">
@@ -85,7 +309,7 @@ function App() {
             </h2>
             <img
               src={petikAkhir}
-              className="absolute right-[386px] top-[562px] font-bold text-[32px] text-black"
+              className="absolute right-[340px] top-[116px] font-bold text-[32px] text-black"
               alt=""
             />
           </div>

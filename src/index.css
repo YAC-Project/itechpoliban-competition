@@ -2,3 +2,17 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+#heading-hero-stroke {
+  -webkit-text-fill-color: transparent; /* Will override color (regardless of order) */
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #ffb800;
+  font-family: "Tomorrow", sans-serif;
+}
+
+#heading-hero {
+  font-family: "Tomorrow", sans-serif;
+}
+#menu-toggle:checked + label + #menu {
+  display: block;
+}
