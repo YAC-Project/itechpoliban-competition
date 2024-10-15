@@ -1,6 +1,12 @@
 import petikAwal from "./assets/images/petik-awal.png";
 import petikAkhir from "./assets/images/petik-akhir.png";
-import bgSection2 from "./assets/images/bg-section-2.png";
+import bgSection2 from "./assets/images/bg-teset1.png";
+import ppl from "./assets/images/software 1.png";
+import ui from "./assets/images/ui-design 1.png";
+import poster from "./assets/images/web-design 1.png";
+import kti from "./assets/images/paper 1.png";
+import dummy from "./assets/images/dummy.jpeg";
+import itech1 from "./assets/images/foto-web-1.png";
 import { useEffect } from "react";
 import { useState } from "react";
 import bgHero from "./assets/images/bg-hero.png";
@@ -99,18 +105,18 @@ function App() {
           <h1 className="sm:hidden font-bold text-white text-lg ml-6 font-Sarabun">
             ITECH POLIBAN COMPETITION
           </h1>
-          <div class="sm:hidden z-10 mr-6">
-            <input type="checkbox" id="menu-toggle" class="hidden" />
+          <div className="sm:hidden z-10 mr-6">
+            <input type="checkbox" id="menu-toggle" className="hidden" />
             <label
               for="menu-toggle"
               id="menu-toggle"
-              class="btn btn-square btn-ghost cursor-pointer"
+              className="btn btn-square btn-ghost cursor-pointer"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
                 viewBox="0 0 24 24"
-                class="inline-block w-6 h-6 stroke-current"
+                className="inline-block w-6 h-6 stroke-current"
               >
                 <path
                   stroke-linecap="round"
@@ -122,13 +128,13 @@ function App() {
             </label>
             <div
               id="menu"
-              class="dropdown-content absolute right-0 mt-3 p-2 shadow bg-base-100 rounded-box w-full hidden z-10"
+              className="dropdown-content absolute right-0 mt-3 p-2 shadow bg-base-100 rounded-box w-full hidden z-10"
             >
-              <ul class="flex flex-col items-center gap-6 py-2 z-10">
+              <ul className="flex flex-col items-center gap-6 py-2 z-10">
                 <li>
                   <a
                     href="/"
-                    class="relative text-xl after:content-[''] after:w-full after:h-0.5 after:bg-white after:absolute after:-bottom-2 after:left-0 after:transition-all after:duration-300 after:ease-in-out after:transform after:scale-x-75 z-30"
+                    className="relative text-xl after:content-[''] after:w-full after:h-0.5 after:bg-white after:absolute after:-bottom-2 after:left-0 after:transition-all after:duration-300 after:ease-in-out after:transform after:scale-x-75 z-30"
                   >
                     Beranda
                   </a>
@@ -136,7 +142,7 @@ function App() {
                 <li>
                   <a
                     href="#tentang"
-                    class="relative text-xl after:content-[''] after:w-full after:h-0.5 after:bg-white after:absolute after:-bottom-2 after:left-0 after:transition-all after:duration-300 after:ease-in-out after:transform after:scale-x-0 after:hover:scale-x-75  z-30"
+                    className="relative text-xl after:content-[''] after:w-full after:h-0.5 after:bg-white after:absolute after:-bottom-2 after:left-0 after:transition-all after:duration-300 after:ease-in-out after:transform after:scale-x-0 after:hover:scale-x-75  z-30"
                   >
                     Tentang
                   </a>
@@ -144,7 +150,7 @@ function App() {
                 <li>
                   <a
                     href="#kategori"
-                    class="relative text-xl after:content-[''] after:w-full after:h-0.5 after:bg-white after:absolute after:-bottom-2 after:left-0 after:transition-all after:duration-300 after:ease-in-out after:transform after:scale-x-0 after:hover:scale-x-75"
+                    className="relative text-xl after:content-[''] after:w-full after:h-0.5 after:bg-white after:absolute after:-bottom-2 after:left-0 after:transition-all after:duration-300 after:ease-in-out after:transform after:scale-x-0 after:hover:scale-x-75"
                   >
                     Kategori
                   </a>
@@ -152,7 +158,7 @@ function App() {
                 <li>
                   <a
                     href="#timeline"
-                    class="relative text-xl after:content-[''] after:w-full after:h-0.5 after:bg-white after:absolute after:-bottom-2 after:left-0 after:transition-all after:duration-300 after:ease-in-out after:transform after:scale-x-0 after:hover:scale-x-75"
+                    className="relative text-xl after:content-[''] after:w-full after:h-0.5 after:bg-white after:absolute after:-bottom-2 after:left-0 after:transition-all after:duration-300 after:ease-in-out after:transform after:scale-x-0 after:hover:scale-x-75"
                   >
                     Timeline
                   </a>
@@ -160,7 +166,7 @@ function App() {
                 <li>
                   <a
                     href="#kontak"
-                    class="relative text-xl after:content-[''] after:w-full after:h-0.5 after:bg-white after:absolute after:-bottom-2 after:left-0 after:transition-all after:duration-300 after:ease-in-out after:transform after:scale-x-0 after:hover:scale-x-75"
+                    className="relative text-xl after:content-[''] after:w-full after:h-0.5 after:bg-white after:absolute after:-bottom-2 after:left-0 after:transition-all after:duration-300 after:ease-in-out after:transform after:scale-x-0 after:hover:scale-x-75"
                   >
                     Kontak
                   </a>
@@ -293,25 +299,134 @@ function App() {
       {/* section 2 */}
       <section>
         <div
-          className="bg-cover bg-center h-screen"
+          className="bg-cover bg-center h-full"
           style={{ backgroundImage: `url(${bgSection2})` }}
         >
+          {/* heading tagline */}
           <div className="pt-10 relative">
             <img
               src={petikAwal}
               className="absolute left-[258px] top-[34px] font-bold text-[32px] text-black"
               alt=""
             />
-            <h2 className="font-Merriweather font-light italic text-[32px] text-white text-center">
+            <h2 className="font-Merriweather font-light italic text-[32px] sm:text-base md:text-base text-white text-center">
               Peran Pemuda dalam Menjaga Keberagaman <br />
               Budaya di
-              <span className="font-bold"> Era Kecerdasan Buatan</span>
+              <span className="font-bold">
+                {" "}
+                Era Kecerdasan Buatan
+              </span>
             </h2>
             <img
               src={petikAkhir}
               className="absolute right-[340px] top-[116px] font-bold text-[32px] text-black"
               alt=""
             />
+          </div>
+
+          {/* heading 2 */}
+          <div className="mt-24 flex w-full relative justify-center gap-8">
+            {/* kiri */}
+            <div className="ml-24 w-1/2 flex flex-col gap-y-8">
+              <h2 className="font-Sarabun font-semibold text-7xl text-white">
+                <span className="bg-gradient-to-r from-[#FFB800] to-[#8AC7FF] bg-clip-text text-transparent opacity-87">
+                  ITECH{" "}
+                </span>
+                Poliban <br /> Competition
+              </h2>
+              <div>
+                <p className="text-white font-Sarabun text-lg">
+                  Komunitas ITECH Politeknik Negeri Banjarmasin mengadakan
+                  sebuah acara kompetisi bergengsi yang mencakup berbagai
+                  kategori lomba, ditujukan khusus bagi siswa dan mahasiswa
+                  untuk beradu kreativitas dan inovasi melalui karya-karya
+                  terbaik mereka.
+                </p>
+                <p className="text-white font-Sarabun text-lg">
+                  Kompetisi ini bertujuan untuk mendorong generasi muda dalam
+                  mengembangkan potensi mereka di bidang teknologi, seni, dan
+                  ilmu pengetahuan. Kompetisi ini diharapkan mampu melahirkan
+                  ide-ide baru yang dapat memberikan kontribusi positif.
+                </p>
+              </div>
+            </div>
+            {/* kanan  */}
+            <div className="text-white text-4xl w-1/2">
+              <div className="relative">
+                <img
+                  src={itech1}
+                  alt="dummy 1"
+                  className="relative z-0 left-10 top-14 -rotate-2 rounded-md"
+                />
+                <img
+                  src={itech1}
+                  alt="dummy 2"
+                  className="relative z-20 left-72 bottom-[70px] rotate-12 rounded-md"
+                />
+                <img
+                  src={itech1}
+                  alt="dummy 3"
+                  className="relative z-10 bottom-32 -rotate-6 left-28 rounded-md"
+                />
+              </div>
+            </div>
+          </div>
+
+          {/* heading 3 */}
+          <div className="container mx-auto py-12">
+            <h2 className="text-5xl font-bold font-Sarabun text-white text-center mb-8">
+              Kategori Lomba
+            </h2>
+
+            <div className="flex justify-center gap-6">
+              {/* <!-- Card 1 --> */}
+              <div className="w-56 h-64 bg-white flex flex-col items-center justify-center rounded-lg">
+                <div className="p-4 flex flex-col gap-y-7 items-center text-center">
+                  <img
+                    src={ppl}
+                    alt="Pengembangan Perangkat Lunak"
+                    className="w-24 h-24 mb-4"
+                  />
+                  <h3 className="font-medium text-xl font-Sarabun text-[#111524]">
+                    Pengembangan <br /> Perangkat Lunak
+                  </h3>
+                </div>
+              </div>
+
+              {/* <!-- Card 2 --> */}
+              <div className="w-56 h-64 bg-white flex flex-col items-center justify-center rounded-lg">
+                <div className="p-4 flex flex-col gap-y-7 items-center text-center">
+                  <img src={ui} alt="UI/UX" className="w-24 h-24 mb-4" />
+                  <h3 className="font-medium text-xl font-Sarabun text-[#111524]">
+                    UI/UX
+                  </h3>
+                </div>
+              </div>
+
+              {/* <!-- Card 3 --> */}
+              <div className="w-56 h-64 bg-white flex flex-col items-center justify-center rounded-lg">
+                <div className="p-4 flex flex-col gap-y-7 items-center text-center">
+                  <img src={poster} alt="Poster" className="w-24 h-24 mb-4" />
+                  <h3 className="font-medium text-xl font-Sarabun text-[#111524]d">
+                    Poster
+                  </h3>
+                </div>
+              </div>
+
+              {/* <!-- Card 4 --> */}
+              <div className="w-56 h-64 bg-white flex flex-col items-center justify-center rounded-lg">
+                <div className="p-4 flex flex-col gap-y-7 items-center text-center">
+                  <img
+                    src={kti}
+                    alt="Karya Tulis Ilmiah"
+                    className="w-24 h-24 mb-4"
+                  />
+                  <h3 className="font-medium text-xl font-Sarabun text-[#111524]">
+                    Karya Tulis Ilmiah
+                  </h3>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
