@@ -4,6 +4,41 @@ import bgSection2 from "./assets/images/bg-section-2.png";
 import { useEffect } from "react";
 import { useState } from "react";
 import bgHero from "./assets/images/bg-hero.png";
+import poster from "./assets/images/svg/poster.svg";
+import ppl from "./assets/images/svg/ppl.svg";
+import kti from "./assets/images/svg/kti.svg";
+import uiUx from "./assets/images/svg/ui-ux.svg";
+import pplBanner from "./assets/images/ppl-banner.jpg";
+import uiUxBanner from "./assets/images/ui-ux-banner.jpg";
+import posterBanner from "./assets/images/poster-banner.jpg";
+import ktiBanner from "./assets/images/kti-banner.jpg";
+
+const kategoris = [
+  {
+    id: 1,
+    name: "Pengembangan Perangkat Lunak",
+    image: pplBanner,
+    link: "http://s.id/REG-IPC-2024",
+  },
+  {
+    id: 2,
+    name: "UI/UX",
+    image: uiUxBanner,
+    link: "http://s.id/REG-IPC-2024",
+  },
+  {
+    id: 3,
+    name: "Poster",
+    image: posterBanner,
+    link: "http://s.id/REG-IPC-2024",
+  },
+  {
+    id: 4,
+    name: "Karya Tulis Ilmiah",
+    image: ktiBanner,
+    link: "http://s.id/REG-IPC-2024",
+  },
+];
 
 function App() {
   const [timeLeft, setTimeLeft] = useState({
@@ -12,10 +47,16 @@ function App() {
     minutes: 0,
     seconds: 0,
   });
+  const [selectedKategori, setSelectedKategori] = useState(null);
+
+  const openModal = (kategori) => {
+    setSelectedKategori(kategori);
+    document.getElementById("my_modal_3").showModal();
+  };
 
   useEffect(() => {
     // Set the target date for the countdown
-    const targetDate = new Date("2024-10-20 00:00:00").getTime(); // Example: December 1st, 2024
+    const targetDate = new Date("2024-11-16 00:00:00").getTime(); // Example: December 1st, 2024
 
     const interval = setInterval(() => {
       const now = new Date().getTime();
@@ -104,13 +145,13 @@ function App() {
             <label
               for="menu-toggle"
               id="menu-toggle"
-              class="btn btn-square btn-ghost cursor-pointer"
+              className="btn btn-square btn-ghost cursor-pointer"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
                 viewBox="0 0 24 24"
-                class="inline-block w-6 h-6 stroke-current"
+                className="inline-block w-6 h-6 stroke-current"
               >
                 <path
                   stroke-linecap="round"
@@ -122,13 +163,13 @@ function App() {
             </label>
             <div
               id="menu"
-              class="dropdown-content absolute right-0 mt-3 p-2 shadow bg-base-100 rounded-box w-full hidden z-10"
+              className="dropdown-content absolute right-0 mt-3 p-2 shadow bg-base-100 rounded-box w-full hidden z-10"
             >
-              <ul class="flex flex-col items-center gap-6 py-2 z-10">
+              <ul className="flex flex-col items-center gap-6 py-2 z-10">
                 <li>
                   <a
                     href="/"
-                    class="relative text-xl after:content-[''] after:w-full after:h-0.5 after:bg-white after:absolute after:-bottom-2 after:left-0 after:transition-all after:duration-300 after:ease-in-out after:transform after:scale-x-75 z-30"
+                    className="relative text-xl after:content-[''] after:w-full after:h-0.5 after:bg-white after:absolute after:-bottom-2 after:left-0 after:transition-all after:duration-300 after:ease-in-out after:transform after:scale-x-75 z-30"
                   >
                     Beranda
                   </a>
@@ -136,7 +177,7 @@ function App() {
                 <li>
                   <a
                     href="#tentang"
-                    class="relative text-xl after:content-[''] after:w-full after:h-0.5 after:bg-white after:absolute after:-bottom-2 after:left-0 after:transition-all after:duration-300 after:ease-in-out after:transform after:scale-x-0 after:hover:scale-x-75  z-30"
+                    className="relative text-xl after:content-[''] after:w-full after:h-0.5 after:bg-white after:absolute after:-bottom-2 after:left-0 after:transition-all after:duration-300 after:ease-in-out after:transform after:scale-x-0 after:hover:scale-x-75  z-30"
                   >
                     Tentang
                   </a>
@@ -144,7 +185,7 @@ function App() {
                 <li>
                   <a
                     href="#kategori"
-                    class="relative text-xl after:content-[''] after:w-full after:h-0.5 after:bg-white after:absolute after:-bottom-2 after:left-0 after:transition-all after:duration-300 after:ease-in-out after:transform after:scale-x-0 after:hover:scale-x-75"
+                    className="relative text-xl after:content-[''] after:w-full after:h-0.5 after:bg-white after:absolute after:-bottom-2 after:left-0 after:transition-all after:duration-300 after:ease-in-out after:transform after:scale-x-0 after:hover:scale-x-75"
                   >
                     Kategori
                   </a>
@@ -152,7 +193,7 @@ function App() {
                 <li>
                   <a
                     href="#timeline"
-                    class="relative text-xl after:content-[''] after:w-full after:h-0.5 after:bg-white after:absolute after:-bottom-2 after:left-0 after:transition-all after:duration-300 after:ease-in-out after:transform after:scale-x-0 after:hover:scale-x-75"
+                    className="relative text-xl after:content-[''] after:w-full after:h-0.5 after:bg-white after:absolute after:-bottom-2 after:left-0 after:transition-all after:duration-300 after:ease-in-out after:transform after:scale-x-0 after:hover:scale-x-75"
                   >
                     Timeline
                   </a>
@@ -160,7 +201,7 @@ function App() {
                 <li>
                   <a
                     href="#kontak"
-                    class="relative text-xl after:content-[''] after:w-full after:h-0.5 after:bg-white after:absolute after:-bottom-2 after:left-0 after:transition-all after:duration-300 after:ease-in-out after:transform after:scale-x-0 after:hover:scale-x-75"
+                    className="relative text-xl after:content-[''] after:w-full after:h-0.5 after:bg-white after:absolute after:-bottom-2 after:left-0 after:transition-all after:duration-300 after:ease-in-out after:transform after:scale-x-0 after:hover:scale-x-75"
                   >
                     Kontak
                   </a>
@@ -315,6 +356,72 @@ function App() {
           </div>
         </div>
       </section>
+      <section>
+        <div className="mx-10 md:mx-[105px]">
+          <h2 className="font-Sarabun font-semibold text-[36px] sm:text-[46px] md:text-[64px] text-white text-center relative after:content-[''] after:w-full after:h-0.5 after:bg-gradient-to-r after:from-[#FFB800] after:to-[#8AC7FF] after:absolute after:-bottom-3 after:left-0 after:transition-all after:duration-300 after:ease-in-out after:transform after:scale-x-[.12] mb-10 mt-5">
+            Kategori Lomba
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-14 my-14">
+            <div
+              onClick={() => openModal(kategoris[0])}
+              className="bg-white rounded-lg flex flex-col items-center justify-center gap-4 py-10 transition-all cursor-pointer hover:shadow-[0px_12px_40.6px_-24px_#8AC7FF,0px_12px_40.7px_-18px_#8AC7FF]"
+            >
+              <img src={ppl} alt="" className="min-h-[110px]" />
+              <p className="font-Sarabun font-medium text-2xl text-[#111524] text-center px-2">
+                Pengembangan Perangkat Lunak
+              </p>
+            </div>
+            <div
+              onClick={() => openModal(kategoris[1])}
+              className="bg-white rounded-lg flex flex-col items-center justify-center gap-4 py-10 transition-all cursor-pointer hover:shadow-[0px_12px_40.6px_-24px_#8AC7FF,0px_12px_40.7px_-18px_#8AC7FF]"
+            >
+              <img src={uiUx} alt="" className="min-h-[110px]" />
+              <p className="font-Sarabun font-medium text-2xl text-[#111524] text-center px-2">
+                UI/UX
+              </p>
+            </div>
+            <div
+              onClick={() => openModal(kategoris[2])}
+              className="bg-white rounded-lg flex flex-col items-center justify-center gap-4 py-10 transition-all cursor-pointer hover:shadow-[0px_12px_40.6px_-24px_#8AC7FF,0px_12px_40.7px_-18px_#8AC7FF]"
+            >
+              <img src={poster} alt="" className="min-h-[110px]" />
+              <p className="font-Sarabun font-medium text-2xl text-[#111524] text-center px-2">
+                Poster
+              </p>
+            </div>
+            <div
+              onClick={() => openModal(kategoris[3])}
+              className="bg-white rounded-lg flex flex-col items-center justify-center gap-4 py-10 transition-all cursor-pointer hover:shadow-[0px_12px_40.6px_-24px_#8AC7FF,0px_12px_40.7px_-18px_#8AC7FF]"
+            >
+              <img src={kti} alt="" className="min-h-[110px]" />
+              <p className="font-Sarabun font-medium text-2xl text-[#111524] text-center px-2">
+                Karya Tulis Ilmiah
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <dialog id="my_modal_3" className="modal">
+        <div className="modal-box">
+          <form method="dialog">
+            {/* if there is a button in form, it will close the modal */}
+            <button className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">
+              ✕
+            </button>
+          </form>
+          <h3 className="font-bold text-2xl font-Sarabun mb-4">
+            {selectedKategori?.name}
+          </h3>
+          <img src={selectedKategori?.image} alt="" />
+          <a
+            href={selectedKategori?.link}
+            target="_blank"
+            class="btn text-white bg-green-500 hover:bg-green-600 font-medium text-xl w-full mt-4"
+          >
+            Daftar
+          </a>
+        </div>
+      </dialog>
     </div>
   );
 }
