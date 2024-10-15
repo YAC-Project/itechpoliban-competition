@@ -1,8 +1,9 @@
 import petikAwal from "./assets/images/petik-awal.png";
 import petikAkhir from "./assets/images/petik-akhir.png";
 import bgSection2 from "./assets/images/bg-teset1.png";
-import dummy from "./assets/images/dummy.jpeg";
-import itech1 from "./assets/images/foto-web-1.png";
+import kegiatan1 from "./assets/images/kegiatan.png";
+import kegiatan2 from "./assets/images/kegiatan-2.jpeg";
+import kegiatan3 from "./assets/images/kegiatan-3.jpg";
 import { useEffect } from "react";
 import { useState } from "react";
 import bgHero from "./assets/images/bg-hero.png";
@@ -26,25 +27,29 @@ const kategoris = [
     id: 1,
     name: "Pengembangan Perangkat Lunak",
     image: pplBanner,
-    link: "http://s.id/REG-IPC-2024",
+    link_daftar: "http://s.id/REG-IPC-2024",
+    link_pedoman: "http://s.id/REG-IPC-2024",
   },
   {
     id: 2,
     name: "UI/UX",
     image: uiUxBanner,
-    link: "http://s.id/REG-IPC-2024",
+    link_daftar: "http://s.id/REG-IPC-2024",
+    link_pedoman: "http://s.id/REG-IPC-2024",
   },
   {
     id: 3,
     name: "Poster",
     image: posterBanner,
-    link: "http://s.id/REG-IPC-2024",
+    link_daftar: "http://s.id/REG-IPC-2024",
+    link_pedoman: "http://s.id/REG-IPC-2024",
   },
   {
     id: 4,
     name: "Karya Tulis Ilmiah",
     image: ktiBanner,
-    link: "http://s.id/REG-IPC-2024",
+    link_daftar: "http://s.id/REG-IPC-2024",
+    link_pedoman: "http://s.id/REG-IPC-2024",
   },
 ];
 
@@ -64,7 +69,7 @@ function App() {
 
   useEffect(() => {
     // Set the target date for the countdown
-    const targetDate = new Date("2024-11-16 00:00:00").getTime(); // Example: December 1st, 2024
+    const targetDate = new Date("2024-11-02 00:00:00").getTime(); // Example: December 1st, 2024
 
     const interval = setInterval(() => {
       const now = new Date().getTime();
@@ -392,19 +397,19 @@ function App() {
             <div className="hidden lg:block text-white text-4xl w-1/2 overflow-hidden">
               <div className="relative">
                 <img
-                  src={itech1}
-                  alt="dummy 1"
-                  className="relative z-0 left-10 top-14 -rotate-2"
+                  src={kegiatan1}
+                  alt="Kegiatan 1"
+                  className="relative z-0 left-10 top-14 -rotate-2 w-[313px] h-[183px] object-cover"
                 />
                 <img
-                  src={itech1}
-                  alt="dummy 2"
-                  className="relative z-20 left-72 bottom-[70px] rotate-12"
+                  src={kegiatan2}
+                  alt="Kegiatan 2"
+                  className="relative z-20 left-72 bottom-[70px] rotate-12 w-[313px] h-[183px] object-cover"
                 />
                 <img
-                  src={itech1}
-                  alt="dummy 3"
-                  className="relative z-10 bottom-32 -rotate-6 left-28"
+                  src={kegiatan3}
+                  alt="Kegiatan 3"
+                  className="relative z-10 bottom-32 -rotate-6 left-28 w-[313px] h-[183px] object-cover"
                 />
               </div>
             </div>
@@ -419,7 +424,11 @@ function App() {
                   onClick={() => openModal(kategoris[0])}
                   className="bg-white rounded-lg flex flex-col items-center justify-center gap-4 py-10 transition-all cursor-pointer hover:shadow-[0px_12px_40.6px_-24px_#8AC7FF,0px_12px_40.7px_-18px_#8AC7FF]"
                 >
-                  <img src={ppl} alt="" className="min-h-[110px]" />
+                  <img
+                    src={ppl}
+                    alt="Pengembangan Perangkat Lunak"
+                    className="min-h-[110px]"
+                  />
                   <p className="font-Sarabun font-medium text-2xl text-[#111524] text-center px-2">
                     Pengembangan Perangkat Lunak
                   </p>
@@ -428,7 +437,7 @@ function App() {
                   onClick={() => openModal(kategoris[1])}
                   className="bg-white rounded-lg flex flex-col items-center justify-center gap-4 py-10 transition-all cursor-pointer hover:shadow-[0px_12px_40.6px_-24px_#8AC7FF,0px_12px_40.7px_-18px_#8AC7FF]"
                 >
-                  <img src={uiUx} alt="" className="min-h-[110px]" />
+                  <img src={uiUx} alt="UI/UX" className="min-h-[110px]" />
                   <p className="font-Sarabun font-medium text-2xl text-[#111524] text-center px-2">
                     UI/UX
                   </p>
@@ -437,7 +446,7 @@ function App() {
                   onClick={() => openModal(kategoris[2])}
                   className="bg-white rounded-lg flex flex-col items-center justify-center gap-4 py-10 transition-all cursor-pointer hover:shadow-[0px_12px_40.6px_-24px_#8AC7FF,0px_12px_40.7px_-18px_#8AC7FF]"
                 >
-                  <img src={poster} alt="" className="min-h-[110px]" />
+                  <img src={poster} alt="Poster" className="min-h-[110px]" />
                   <p className="font-Sarabun font-medium text-2xl text-[#111524] text-center px-2">
                     Poster
                   </p>
@@ -446,7 +455,11 @@ function App() {
                   onClick={() => openModal(kategoris[3])}
                   className="bg-white rounded-lg flex flex-col items-center justify-center gap-4 py-10 transition-all cursor-pointer hover:shadow-[0px_12px_40.6px_-24px_#8AC7FF,0px_12px_40.7px_-18px_#8AC7FF]"
                 >
-                  <img src={kti} alt="" className="min-h-[110px]" />
+                  <img
+                    src={kti}
+                    alt="Karya Tulis Ilmiah"
+                    className="min-h-[110px]"
+                  />
                   <p className="font-Sarabun font-medium text-2xl text-[#111524] text-center px-2">
                     Karya Tulis Ilmiah
                   </p>
@@ -607,7 +620,7 @@ function App() {
         </div>
       </section>
       <section className="bg-white">
-        <div className="mx-10 md:mx-[105px]">
+        <div className="py-5 mx-10 md:mx-[105px]">
           <h2 className="font-Sarabun font-semibold text-[36px] sm:text-[46px] md:text-[64px] text-black text-center relative after:content-[''] after:w-full after:h-0.5 after:bg-gradient-to-r after:from-[#FFB800] after:to-[#8AC7FF] after:absolute after:-bottom-3 after:left-0 after:transition-all after:duration-300 after:ease-in-out after:transform after:scale-x-[.08] mb-10 mt-5">
             Lokasi Kami
           </h2>
@@ -639,7 +652,11 @@ function App() {
 
       <footer className="bg-[#111524]">
         <div className="pt-[62px] pb-[43px] flex flex-col justify-center items-center">
-          <img src={logoItech} alt="" className="w-[60px] h-[60px]" />
+          <img
+            src={logoItech}
+            alt="Logo iTechPoliban"
+            className="w-[60px] h-[60px]"
+          />
           <p className="font-Sarabun text-2xl text-white mt-2">
             <span className="bg-gradient-to-r from-[#FFB800] to-[#8AC7FF] bg-clip-text text-transparent opacity-87">
               ITECH
@@ -713,9 +730,16 @@ function App() {
           <h3 className="font-bold text-2xl font-Sarabun mb-4">
             {selectedKategori?.name}
           </h3>
-          <img src={selectedKategori?.image} alt="" />
+          <img src={selectedKategori?.image} alt={selectedKategori?.name} />
           <a
-            href={selectedKategori?.link}
+            href={selectedKategori?.link_pedoman}
+            target="_blank"
+            class="btn text-white bg-yellow-500 hover:bg-yellow-600 font-medium text-xl w-full mt-4"
+          >
+            Buku Pedoman
+          </a>
+          <a
+            href={selectedKategori?.link_daftar}
             target="_blank"
             class="btn text-white bg-green-500 hover:bg-green-600 font-medium text-xl w-full mt-4"
           >
