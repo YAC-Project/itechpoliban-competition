@@ -312,10 +312,7 @@ function App() {
             <h2 className="font-Merriweather font-light italic text-[32px] sm:text-base md:text-base text-white text-center">
               Peran Pemuda dalam Menjaga Keberagaman <br />
               Budaya di
-              <span className="font-bold">
-                {" "}
-                Era Kecerdasan Buatan
-              </span>
+              <span className="font-bold"> Era Kecerdasan Buatan</span>
             </h2>
             <img
               src={petikAkhir}
@@ -368,63 +365,6 @@ function App() {
                   alt="dummy 3"
                   className="relative z-10 bottom-32 -rotate-6 left-28 rounded-md"
                 />
-              </div>
-            </div>
-          </div>
-
-          {/* heading 3 */}
-          <div className="container mx-auto py-12">
-            <h2 className="text-5xl font-bold font-Sarabun text-white text-center mb-8">
-              Kategori Lomba
-            </h2>
-
-            <div className="flex justify-center gap-6">
-              {/* <!-- Card 1 --> */}
-              <div className="w-56 h-64 bg-white flex flex-col items-center justify-center rounded-lg">
-                <div className="p-4 flex flex-col gap-y-7 items-center text-center">
-                  <img
-                    src={ppl}
-                    alt="Pengembangan Perangkat Lunak"
-                    className="w-24 h-24 mb-4"
-                  />
-                  <h3 className="font-medium text-xl font-Sarabun text-[#111524]">
-                    Pengembangan <br /> Perangkat Lunak
-                  </h3>
-                </div>
-              </div>
-
-              {/* <!-- Card 2 --> */}
-              <div className="w-56 h-64 bg-white flex flex-col items-center justify-center rounded-lg">
-                <div className="p-4 flex flex-col gap-y-7 items-center text-center">
-                  <img src={ui} alt="UI/UX" className="w-24 h-24 mb-4" />
-                  <h3 className="font-medium text-xl font-Sarabun text-[#111524]">
-                    UI/UX
-                  </h3>
-                </div>
-              </div>
-
-              {/* <!-- Card 3 --> */}
-              <div className="w-56 h-64 bg-white flex flex-col items-center justify-center rounded-lg">
-                <div className="p-4 flex flex-col gap-y-7 items-center text-center">
-                  <img src={poster} alt="Poster" className="w-24 h-24 mb-4" />
-                  <h3 className="font-medium text-xl font-Sarabun text-[#111524]d">
-                    Poster
-                  </h3>
-                </div>
-              </div>
-
-              {/* <!-- Card 4 --> */}
-              <div className="w-56 h-64 bg-white flex flex-col items-center justify-center rounded-lg">
-                <div className="p-4 flex flex-col gap-y-7 items-center text-center">
-                  <img
-                    src={kti}
-                    alt="Karya Tulis Ilmiah"
-                    className="w-24 h-24 mb-4"
-                  />
-                  <h3 className="font-medium text-xl font-Sarabun text-[#111524]">
-                    Karya Tulis Ilmiah
-                  </h3>
-                </div>
               </div>
             </div>
           </div>
