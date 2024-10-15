@@ -1,10 +1,6 @@
 import petikAwal from "./assets/images/petik-awal.png";
 import petikAkhir from "./assets/images/petik-akhir.png";
 import bgSection2 from "./assets/images/bg-teset1.png";
-import ppl from "./assets/images/software 1.png";
-import ui from "./assets/images/ui-design 1.png";
-import poster from "./assets/images/web-design 1.png";
-import kti from "./assets/images/paper 1.png";
 import dummy from "./assets/images/dummy.jpeg";
 import itech1 from "./assets/images/foto-web-1.png";
 import { useEffect } from "react";
@@ -345,42 +341,44 @@ function App() {
         >
           {/* heading tagline */}
           <div className="pt-10 relative">
-            <img
-              src={petikAwal}
-              className="absolute left-[258px] top-[34px] font-bold text-[32px] text-black"
-              alt=""
-            />
-            <h2 className="font-Merriweather font-light italic text-[32px] sm:text-base md:text-base text-white text-center">
-              Peran Pemuda dalam Menjaga Keberagaman <br />
-              Budaya di
-              <span className="font-bold"> Era Kecerdasan Buatan</span>
-            </h2>
-            <img
-              src={petikAkhir}
-              className="absolute right-[340px] top-[116px] font-bold text-[32px] text-black"
-              alt=""
-            />
+            <div className="flex justify-center">
+              <h2 className="inline-block font-Merriweather font-light italic text-base md:text-2xl lg:text-[32px] text-white text-center relative">
+                <img
+                  src={petikAwal}
+                  className="absolute w-5 h-5 -left-7 -top-2 font-bold text-black"
+                  alt=""
+                />
+                Peran Pemuda dalam Menjaga Keberagaman <br />
+                Budaya di
+                <span className="font-bold"> Era Kecerdasan Buatan</span>
+                <img
+                  src={petikAkhir}
+                  className="absolute w-5 h-5 right-4 -bottom-2 md:right-8 lg:right-14 font-bold text-black"
+                  alt=""
+                />
+              </h2>
+            </div>
           </div>
 
           {/* heading 2 */}
           <div className="mt-24 flex w-full relative justify-center gap-8">
             {/* kiri */}
-            <div className="ml-24 w-1/2 flex flex-col gap-y-8">
-              <h2 className="font-Sarabun font-semibold text-7xl text-white">
+            <div className="mx-10 md:lg-0 lg:ml-24 w-full md:w-1/2 flex flex-col gap-y-8">
+              <h2 className="font-Sarabun font-semibold text-[40px] lg:text-[64px] text-white">
                 <span className="bg-gradient-to-r from-[#FFB800] to-[#8AC7FF] bg-clip-text text-transparent opacity-87">
                   ITECH{" "}
                 </span>
                 Poliban <br /> Competition
               </h2>
               <div>
-                <p className="text-white font-Sarabun text-lg">
+                <p className="text-white font-Sarabun text-lg text-justify">
                   Komunitas ITECH Politeknik Negeri Banjarmasin mengadakan
                   sebuah acara kompetisi bergengsi yang mencakup berbagai
                   kategori lomba, ditujukan khusus bagi siswa dan mahasiswa
                   untuk beradu kreativitas dan inovasi melalui karya-karya
                   terbaik mereka.
                 </p>
-                <p className="text-white font-Sarabun text-lg">
+                <p className="text-white font-Sarabun text-lg text-justify">
                   Kompetisi ini bertujuan untuk mendorong generasi muda dalam
                   mengembangkan potensi mereka di bidang teknologi, seni, dan
                   ilmu pengetahuan. Kompetisi ini diharapkan mampu melahirkan
@@ -389,7 +387,7 @@ function App() {
               </div>
             </div>
             {/* kanan  */}
-            <div className="text-white text-4xl w-1/2">
+            <div className="hidden lg:block text-white text-4xl w-1/2 overflow-hidden">
               <div className="relative">
                 <img
                   src={itech1}
@@ -409,53 +407,54 @@ function App() {
               </div>
             </div>
           </div>
+          <section>
+            <div className="mt-20 md:mt-0 mx-10 md:mx-[105px] pb-10">
+              <h2 className="font-Sarabun font-semibold text-[36px] sm:text-[46px] md:text-[64px] text-white text-center relative after:content-[''] after:w-full after:h-0.5 after:bg-gradient-to-r after:from-[#FFB800] after:to-[#8AC7FF] after:absolute after:-bottom-3 after:left-0 after:transition-all after:duration-300 after:ease-in-out after:transform after:scale-x-[.12] mb-10 mt-5">
+                Kategori Lomba
+              </h2>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-14 my-14">
+                <div
+                  onClick={() => openModal(kategoris[0])}
+                  className="bg-white rounded-lg flex flex-col items-center justify-center gap-4 py-10 transition-all cursor-pointer hover:shadow-[0px_12px_40.6px_-24px_#8AC7FF,0px_12px_40.7px_-18px_#8AC7FF]"
+                >
+                  <img src={ppl} alt="" className="min-h-[110px]" />
+                  <p className="font-Sarabun font-medium text-2xl text-[#111524] text-center px-2">
+                    Pengembangan Perangkat Lunak
+                  </p>
+                </div>
+                <div
+                  onClick={() => openModal(kategoris[1])}
+                  className="bg-white rounded-lg flex flex-col items-center justify-center gap-4 py-10 transition-all cursor-pointer hover:shadow-[0px_12px_40.6px_-24px_#8AC7FF,0px_12px_40.7px_-18px_#8AC7FF]"
+                >
+                  <img src={uiUx} alt="" className="min-h-[110px]" />
+                  <p className="font-Sarabun font-medium text-2xl text-[#111524] text-center px-2">
+                    UI/UX
+                  </p>
+                </div>
+                <div
+                  onClick={() => openModal(kategoris[2])}
+                  className="bg-white rounded-lg flex flex-col items-center justify-center gap-4 py-10 transition-all cursor-pointer hover:shadow-[0px_12px_40.6px_-24px_#8AC7FF,0px_12px_40.7px_-18px_#8AC7FF]"
+                >
+                  <img src={poster} alt="" className="min-h-[110px]" />
+                  <p className="font-Sarabun font-medium text-2xl text-[#111524] text-center px-2">
+                    Poster
+                  </p>
+                </div>
+                <div
+                  onClick={() => openModal(kategoris[3])}
+                  className="bg-white rounded-lg flex flex-col items-center justify-center gap-4 py-10 transition-all cursor-pointer hover:shadow-[0px_12px_40.6px_-24px_#8AC7FF,0px_12px_40.7px_-18px_#8AC7FF]"
+                >
+                  <img src={kti} alt="" className="min-h-[110px]" />
+                  <p className="font-Sarabun font-medium text-2xl text-[#111524] text-center px-2">
+                    Karya Tulis Ilmiah
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
         </div>
       </section>
-      <section>
-        <div className="mx-10 md:mx-[105px]">
-          <h2 className="font-Sarabun font-semibold text-[36px] sm:text-[46px] md:text-[64px] text-white text-center relative after:content-[''] after:w-full after:h-0.5 after:bg-gradient-to-r after:from-[#FFB800] after:to-[#8AC7FF] after:absolute after:-bottom-3 after:left-0 after:transition-all after:duration-300 after:ease-in-out after:transform after:scale-x-[.12] mb-10 mt-5">
-            Kategori Lomba
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-14 my-14">
-            <div
-              onClick={() => openModal(kategoris[0])}
-              className="bg-white rounded-lg flex flex-col items-center justify-center gap-4 py-10 transition-all cursor-pointer hover:shadow-[0px_12px_40.6px_-24px_#8AC7FF,0px_12px_40.7px_-18px_#8AC7FF]"
-            >
-              <img src={ppl} alt="" className="min-h-[110px]" />
-              <p className="font-Sarabun font-medium text-2xl text-[#111524] text-center px-2">
-                Pengembangan Perangkat Lunak
-              </p>
-            </div>
-            <div
-              onClick={() => openModal(kategoris[1])}
-              className="bg-white rounded-lg flex flex-col items-center justify-center gap-4 py-10 transition-all cursor-pointer hover:shadow-[0px_12px_40.6px_-24px_#8AC7FF,0px_12px_40.7px_-18px_#8AC7FF]"
-            >
-              <img src={uiUx} alt="" className="min-h-[110px]" />
-              <p className="font-Sarabun font-medium text-2xl text-[#111524] text-center px-2">
-                UI/UX
-              </p>
-            </div>
-            <div
-              onClick={() => openModal(kategoris[2])}
-              className="bg-white rounded-lg flex flex-col items-center justify-center gap-4 py-10 transition-all cursor-pointer hover:shadow-[0px_12px_40.6px_-24px_#8AC7FF,0px_12px_40.7px_-18px_#8AC7FF]"
-            >
-              <img src={poster} alt="" className="min-h-[110px]" />
-              <p className="font-Sarabun font-medium text-2xl text-[#111524] text-center px-2">
-                Poster
-              </p>
-            </div>
-            <div
-              onClick={() => openModal(kategoris[3])}
-              className="bg-white rounded-lg flex flex-col items-center justify-center gap-4 py-10 transition-all cursor-pointer hover:shadow-[0px_12px_40.6px_-24px_#8AC7FF,0px_12px_40.7px_-18px_#8AC7FF]"
-            >
-              <img src={kti} alt="" className="min-h-[110px]" />
-              <p className="font-Sarabun font-medium text-2xl text-[#111524] text-center px-2">
-                Karya Tulis Ilmiah
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
+
       <dialog id="my_modal_3" className="modal">
         <div className="modal-box">
           <form method="dialog">
