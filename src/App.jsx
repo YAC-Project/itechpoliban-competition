@@ -14,6 +14,12 @@ import pplBanner from "./assets/images/ppl-banner.jpg";
 import uiUxBanner from "./assets/images/ui-ux-banner.jpg";
 import posterBanner from "./assets/images/poster-banner.jpg";
 import ktiBanner from "./assets/images/kti-banner.jpg";
+import logoItech from "./assets/images/svg/logo-itech.svg";
+import logoPoliban from "./assets/images/svg/logo-poliban.svg";
+import discordIcon from "./assets/images/svg/discord-icon.svg";
+import githubIcon from "./assets/images/svg/github-icon.svg";
+import instagramIcon from "./assets/images/svg/instagram-icon.svg";
+import whatsappIcon from "./assets/images/svg/whatsapp-icon.svg";
 
 const kategoris = [
   {
@@ -165,7 +171,7 @@ function App() {
             </label>
             <div
               id="menu"
-              className="dropdown-content absolute right-0 mt-3 p-2 shadow bg-base-100 rounded-box w-full hidden z-10"
+              className="dropdown-content absolute right-0 mt-3 p-2 shadow bg-base-100 rounded-b-2xl w-full hidden z-10"
             >
               <ul className="flex flex-col items-center gap-6 py-2 z-10">
                 <li>
@@ -220,16 +226,12 @@ function App() {
             className="w-full h-full object-cover object-center"
           />
         </div>
-        <div className="absolute bg-black/100 w-full h-full z-0 inset-0 bg-gradient-to-l from-black/80 via-[#8ac6ffa1] to-black/80   opacity-90"></div>
+        <div className="absolute bg-black/100 w-full h-full z-0 inset-0 bg-gradient-to-l from-black/80 via-[#8ac6ffa1] to-black/80  opacity-90"></div>
         <div className="pt-[115px] pb-[74px] bg-[#111524] flex flex-col items-center justify-center">
           <div className="flex gap-[6px] z-0">
+            <img src={logoPoliban} alt="Logo Poliban" className="w-16 h-16" />
             <img
-              src="src/assets/images/svg/logo-poliban.svg"
-              alt="Logo Poliban"
-              className="w-16 h-16"
-            />
-            <img
-              src="src/assets/images/svg/logo-itech.svg"
+              src={logoItech}
               alt="Logo iTechPoliban"
               className="w-16 h-16"
             />
@@ -336,7 +338,7 @@ function App() {
       {/* section 2 */}
       <section>
         <div
-          className="bg-cover bg-center h-full"
+          className="bg-cover bg-center h-full relative"
           style={{ backgroundImage: `url(${bgSection2})` }}
         >
           {/* heading tagline */}
@@ -392,22 +394,22 @@ function App() {
                 <img
                   src={itech1}
                   alt="dummy 1"
-                  className="relative z-0 left-10 top-14 -rotate-2 rounded-md"
+                  className="relative z-0 left-10 top-14 -rotate-2"
                 />
                 <img
                   src={itech1}
                   alt="dummy 2"
-                  className="relative z-20 left-72 bottom-[70px] rotate-12 rounded-md"
+                  className="relative z-20 left-72 bottom-[70px] rotate-12"
                 />
                 <img
                   src={itech1}
                   alt="dummy 3"
-                  className="relative z-10 bottom-32 -rotate-6 left-28 rounded-md"
+                  className="relative z-10 bottom-32 -rotate-6 left-28"
                 />
               </div>
             </div>
           </div>
-          <section>
+          <section className="z-10">
             <div className="mt-20 md:mt-0 mx-10 md:mx-[105px] pb-10">
               <h2 className="font-Sarabun font-semibold text-[36px] sm:text-[46px] md:text-[64px] text-white text-center relative after:content-[''] after:w-full after:h-0.5 after:bg-gradient-to-r after:from-[#FFB800] after:to-[#8AC7FF] after:absolute after:-bottom-3 after:left-0 after:transition-all after:duration-300 after:ease-in-out after:transform after:scale-x-[.12] mb-10 mt-5">
                 Kategori Lomba
@@ -454,6 +456,251 @@ function App() {
           </section>
         </div>
       </section>
+
+      <section>
+        <div className="mt-10">
+          <h2 className="font-Sarabun font-semibold text-[36px] sm:text-[46px] md:text-[64px] text-white text-center relative after:content-[''] after:w-full after:h-0.5 after:bg-gradient-to-r after:from-[#FFB800] after:to-[#8AC7FF] after:absolute after:-bottom-3 after:left-0 after:transition-all after:duration-300 after:ease-in-out after:transform after:scale-x-[.08] mb-10 mt-5">
+            Timeline
+          </h2>
+          <div className="my-10">
+            <div>
+              <ul className="timeline timeline-snap-icon max-md:timeline-compact timeline-vertical">
+                <li>
+                  <div className="timeline-middle"></div>
+                  <div className="timeline-start mb-10 md:text-end"></div>
+                  <hr
+                    className="rounded-t-[5px] rounded-b-none ml-4 md:ml-0 bg-[#FFB800]"
+                    style={{
+                      width: "23px",
+                      height: "149px",
+                    }}
+                  />
+                </li>
+                <li className="font-Sarabun">
+                  <hr />
+                  <div className="timeline-middle">
+                    <div className="w-[58px] h-[58px] bg-[#FFB800] rounded-full -mt-4 animate-kedapKedip"></div>
+                  </div>
+                  <div className="timeline-end mb-10 -mt-20 ml-4">
+                    <h3 className="text-[#FFB800] font-semibold text-[32px]">
+                      Pendaftaran
+                    </h3>
+                    <p className="text-xl text-white font-medium italic">
+                      Semua Kategori Lomba <br />{" "}
+                      <span className="font-light not-italic">
+                        14 Oktober - 2 November 2024
+                      </span>
+                    </p>
+                  </div>
+                  <hr
+                    className="rounded-none -mt-2 rounded-b-none bg-[#E4E4E4]"
+                    style={{
+                      width: "23px",
+                      height: "149px",
+                      zIndex: -1,
+                    }}
+                  />
+                </li>
+                <li className="font-Sarabun">
+                  <hr />
+                  <div className="timeline-middle">
+                    <div className="w-[58px] h-[58px] bg-[#E4E4E4] rounded-full -mt-4"></div>
+                  </div>
+                  <div className="timeline-start mb-10 -mt-20 mr-4">
+                    <h3 className="text-[#FFB800] font-semibold text-[32px] -mt-28 ml-3 md:-mt-0 md:ml-0">
+                      Pengumuman Finalis
+                    </h3>
+                    <p className="text-xl text-white font-medium italic ml-3 md:ml-0">
+                      Lomba PPL, UI/UX, POSTER <br />{" "}
+                      <span className="font-light not-italic">
+                        04 November 2024
+                      </span>
+                    </p>
+                  </div>
+                  <hr
+                    className="rounded-none -mt-2 rounded-b-none bg-[#E4E4E4]"
+                    style={{
+                      width: "23px",
+                      height: "149px",
+                      zIndex: -1,
+                    }}
+                  />
+                </li>
+                <li className="font-Sarabun">
+                  <hr />
+                  <div className="timeline-middle">
+                    <div className="w-[58px] h-[58px] bg-[#E4E4E4] rounded-full -mt-4"></div>
+                  </div>
+                  <div className="timeline-end mb-10 -mt-20 ml-4">
+                    <h3 className="text-[#FFB800] font-semibold text-[32px]">
+                      Pengumuman Finalis
+                    </h3>
+                    <p className="text-xl text-white font-medium italic">
+                      Lomba Karya Tulis Ilmiah <br />{" "}
+                      <span className="font-light not-italic">
+                        08 November 2024
+                      </span>
+                    </p>
+                  </div>
+                  <hr
+                    className="rounded-none -mt-2 rounded-b-none bg-[#E4E4E4]"
+                    style={{
+                      width: "23px",
+                      height: "149px",
+                      zIndex: -1,
+                    }}
+                  />
+                </li>
+                <li className="font-Sarabun">
+                  <hr />
+                  <div className="timeline-middle">
+                    <div className="w-[58px] h-[58px] bg-[#E4E4E4] rounded-full -mt-4"></div>
+                  </div>
+                  <div className="timeline-start mb-10 -mt-10 mr-4">
+                    <h3 className="text-[#FFB800] font-semibold text-[32px] -mt-16 md:-mt-0 ml-3 md:ml-0">
+                      Final Presentasi dan <br /> Penjurian
+                    </h3>
+                    <p className="text-xl text-white font-medium italic ml-3 md:ml-0">
+                      Lomba PPL, Desain UI/UX <br />{" "}
+                      <span className="font-light not-italic">
+                        09 November 2024
+                      </span>
+                    </p>
+                  </div>
+                  <hr
+                    className="rounded-none -mt-2 rounded-b-none bg-[#E4E4E4]"
+                    style={{
+                      width: "23px",
+                      height: "149px",
+                      zIndex: -1,
+                    }}
+                  />
+                </li>
+                <li className="font-Sarabun">
+                  <hr />
+                  <div className="timeline-middle">
+                    <div className="w-[58px] h-[58px] bg-[#E4E4E4] rounded-full -mt-4"></div>
+                  </div>
+                  <div className="timeline-end mb-10 -mt-6 ml-4">
+                    <h3 className="text-[#FFB800] font-semibold text-[32px]">
+                      Final Presentasi dan <br /> Penjurian
+                    </h3>
+                    <p className="text-xl text-white font-medium italic">
+                      Lomba Karya Tulis Ilmiah <br />{" "}
+                      <span className="font-light not-italic">
+                        16 November 2024
+                      </span>
+                    </p>
+                  </div>
+                  <hr
+                    className="rounded-t-none rounded-b-[5px] -mt-2 bg-[#E4E4E4]"
+                    style={{
+                      width: "23px",
+                      height: "149px",
+                      zIndex: -1,
+                    }}
+                  />
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section className="bg-white">
+        <div className="mx-10 md:mx-[105px]">
+          <h2 className="font-Sarabun font-semibold text-[36px] sm:text-[46px] md:text-[64px] text-black text-center relative after:content-[''] after:w-full after:h-0.5 after:bg-gradient-to-r after:from-[#FFB800] after:to-[#8AC7FF] after:absolute after:-bottom-3 after:left-0 after:transition-all after:duration-300 after:ease-in-out after:transform after:scale-x-[.08] mb-10 mt-5">
+            Lokasi Kami
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-10 place-items-center py-6">
+            <div>
+              <h4 className="font-medium font-Sarabun text-[#111524] text-[32px]">
+                Politeknik Negeri Banjarmasin
+              </h4>
+              <p className="text-[#767373] mt-4">
+                Jl. Brig Jend. Hasan Basri, Pangeran, Kec. Banjarmasin Utara,
+                Kota Banjarmasin, Kalimantan Selatan 70124
+              </p>
+            </div>
+            <div className="w-full">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3983.219719647912!2d114.57935537412587!3d-3.2956938966791793!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2de423a80d47ba6b%3A0x8f5abfaddfe5a2d7!2sPoliteknik%20Negeri%20Banjarmasin!5e0!3m2!1sen!2sid!4v1728977577273!5m2!1sen!2sid"
+                style={{
+                  border: 0,
+                }}
+                className="w-full h-[330px] rounded-3xl"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <footer className="bg-[#111524]">
+        <div className="pt-[62px] pb-[43px] flex flex-col justify-center items-center">
+          <img src={logoItech} alt="" className="w-[60px] h-[60px]" />
+          <p className="font-Sarabun text-2xl text-white mt-2">
+            <span className="bg-gradient-to-r from-[#FFB800] to-[#8AC7FF] bg-clip-text text-transparent opacity-87">
+              ITECH
+            </span>{" "}
+            POLIBAN Competition 2024
+          </p>
+          <div>
+            <div className="flex gap-[13px] mt-5">
+              <a
+                href="https://www.instagram.com/itechpoliban"
+                className="bg-white rounded-full p-1 w-7 h-7 flex items-center justify-center hover:scale-[1.05] transition-all"
+              >
+                <img
+                  src={instagramIcon}
+                  alt="instagram icon"
+                  width={18}
+                  height={18}
+                />
+              </a>
+              <a
+                href="#"
+                className="bg-white rounded-full p-1 w-7 h-7 flex items-center justify-center hover:scale-[1.05] transition-all"
+              >
+                <img
+                  src={whatsappIcon}
+                  alt="whatsapp icon"
+                  width={18}
+                  height={18}
+                />
+              </a>
+              <a
+                href="#"
+                className="bg-white rounded-full p-1 w-7 h-7 flex items-center justify-center hover:scale-[1.05] transition-all"
+              >
+                <img
+                  src={discordIcon}
+                  alt="discord icon"
+                  width={18}
+                  height={18}
+                />
+              </a>
+              <a
+                href="#"
+                className="bg-white rounded-full p-1 w-7 h-7 flex items-center justify-center hover:scale-[1.05] transition-all"
+              >
+                <img
+                  src={githubIcon}
+                  alt="github icon"
+                  width={18}
+                  height={18}
+                />
+              </a>
+            </div>
+          </div>
+          <div>
+            <p className="font-Sarabun text-[#C9C9C9] text-center mt-20">
+              Copyright by Komunitas ITECH <br /> Politeknik Negeri Banjarmasin.
+            </p>
+          </div>
+        </div>
+      </footer>
 
       <dialog id="my_modal_3" className="modal">
         <div className="modal-box">
