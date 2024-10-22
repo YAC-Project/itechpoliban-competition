@@ -224,7 +224,7 @@ function App() {
           </div>
         </div>
       </header>
-      <section className="relative">
+      <section id="beranda" className="relative">
         <div className="absolute w-full h-full z-0">
           <img
             src={bgHero}
@@ -232,7 +232,7 @@ function App() {
           />
         </div>
         <div className="absolute bg-black/100 w-full h-full z-0 inset-0 bg-gradient-to-l from-black/80 via-[#8ac6ffa1] to-black/80  opacity-90"></div>
-        <div className="pt-[115px] pb-[74px] bg-[#111524] flex flex-col items-center justify-center">
+        <div className="pt-[115px] pb-[74px] bg-[#111524] flex flex-col items-center justify-center mx-4 md:mx-0">
           <div className="flex gap-[6px] z-0">
             <img src={logoPoliban} alt="Logo Poliban" className="w-16 h-16" />
             <img
@@ -341,7 +341,7 @@ function App() {
         </div>
       </section>
       {/* section 2 */}
-      <section>
+      <section id="tentang" className="scroll-mt-16">
         <div
           className="bg-cover bg-center h-full relative"
           style={{ backgroundImage: `url(${bgSection2})` }}
@@ -414,7 +414,7 @@ function App() {
               </div>
             </div>
           </div>
-          <section className="z-10">
+          <section id="kategori" className="z-10 scroll-mt-16">
             <div className="mt-20 md:mt-0 mx-10 md:mx-[105px] pb-10">
               <h2 className="font-Sarabun font-semibold text-[36px] sm:text-[46px] md:text-[64px] text-white text-center relative after:content-[''] after:w-full after:h-0.5 after:bg-gradient-to-r after:from-[#FFB800] after:to-[#8AC7FF] after:absolute after:-bottom-3 after:left-0 after:transition-all after:duration-300 after:ease-in-out after:transform after:scale-x-[.12] mb-10 mt-5">
                 Kategori Lomba
@@ -470,8 +470,8 @@ function App() {
         </div>
       </section>
 
-      <section>
-        <div className="mt-10">
+      <section id="timeline" className="scroll-mt-16">
+        <div className="mt-10 mx-10 md:mx-0">
           <h2 className="font-Sarabun font-semibold text-[36px] sm:text-[46px] md:text-[64px] text-white text-center relative after:content-[''] after:w-full after:h-0.5 after:bg-gradient-to-r after:from-[#FFB800] after:to-[#8AC7FF] after:absolute after:-bottom-3 after:left-0 after:transition-all after:duration-300 after:ease-in-out after:transform after:scale-x-[.08] mb-10 mt-5">
             Timeline
           </h2>
@@ -499,9 +499,59 @@ function App() {
                       Pendaftaran
                     </h3>
                     <p className="text-xl text-white font-medium italic">
-                      Semua Kategori Lomba <br />{" "}
+                      Desain Poster <br />{" "}
                       <span className="font-light not-italic">
                         14 Oktober - 2 November 2024
+                      </span>
+                    </p>
+                  </div>
+                  <hr
+                    className="rounded-none -mt-2 rounded-b-none bg-[#E4E4E4]"
+                    style={{
+                      width: "23px",
+                      height: "149px",
+                      zIndex: -1,
+                    }}
+                  />
+                </li>
+                <li className="font-Sarabun">
+                  <hr />
+                  <div className="timeline-middle">
+                    <div className="w-[58px] h-[58px] bg-[#E4E4E4] rounded-full -mt-4"></div>
+                  </div>
+                  <div className="timeline-start mb-10 -mt-20 mr-4">
+                    <h3 className="text-[#FFB800] font-semibold text-[32px] -mt-28 md:-mt-0 ml-3 md:ml-0">
+                      Pengumuman Juara
+                    </h3>
+                    <p className="text-xl text-white font-medium italic ml-3 md:ml-0">
+                      Desain Poster <br />{" "}
+                      <span className="font-light not-italic">
+                        09 November 2024
+                      </span>
+                    </p>
+                  </div>
+                  <hr
+                    className="rounded-none -mt-2 rounded-b-none bg-[#E4E4E4]"
+                    style={{
+                      width: "23px",
+                      height: "149px",
+                      zIndex: -1,
+                    }}
+                  />
+                </li>
+                <li className="font-Sarabun">
+                  <hr />
+                  <div className="timeline-middle">
+                    <div className="w-[58px] h-[58px] bg-[#E4E4E4] rounded-full -mt-4"></div>
+                  </div>
+                  <div className="timeline-end mb-10 -mt-20 ml-4">
+                    <h3 className="text-[#FFB800] font-semibold text-[32px]">
+                      Pendaftaran
+                    </h3>
+                    <p className="text-xl text-white font-medium italic">
+                      Karya Tulis Ilmiah, UI/UX, PPL <br />{" "}
+                      <span className="font-light not-italic">
+                        14 Oktober - 10 November 2024
                       </span>
                     </p>
                   </div>
@@ -524,9 +574,9 @@ function App() {
                       Pengumuman Finalis
                     </h3>
                     <p className="text-xl text-white font-medium italic ml-3 md:ml-0">
-                      Lomba PPL, UI/UX, POSTER <br />{" "}
+                      Karya Tulis Ilmiah, UI/UX, PPL <br />{" "}
                       <span className="font-light not-italic">
-                        04 November 2024
+                        17 November 2024
                       </span>
                     </p>
                   </div>
@@ -544,14 +594,14 @@ function App() {
                   <div className="timeline-middle">
                     <div className="w-[58px] h-[58px] bg-[#E4E4E4] rounded-full -mt-4"></div>
                   </div>
-                  <div className="timeline-end mb-10 -mt-20 ml-4">
+                  <div className="timeline-end mb-10 -mt-10 ml-4">
                     <h3 className="text-[#FFB800] font-semibold text-[32px]">
-                      Pengumuman Finalis
+                      Final Presentasi dan <br /> Penjurian
                     </h3>
                     <p className="text-xl text-white font-medium italic">
-                      Lomba Karya Tulis Ilmiah <br />{" "}
+                      Karya Tulis Ilmiah, UI/UX, PPL <br />{" "}
                       <span className="font-light not-italic">
-                        08 November 2024
+                        21 November 2024
                       </span>
                     </p>
                   </div>
@@ -569,39 +619,14 @@ function App() {
                   <div className="timeline-middle">
                     <div className="w-[58px] h-[58px] bg-[#E4E4E4] rounded-full -mt-4"></div>
                   </div>
-                  <div className="timeline-start mb-10 -mt-10 mr-4">
-                    <h3 className="text-[#FFB800] font-semibold text-[32px] -mt-16 md:-mt-0 ml-3 md:ml-0">
-                      Final Presentasi dan <br /> Penjurian
+                  <div className="timeline-start mb-10 -mt-24 mr-4">
+                    <h3 className="text-[#FFB800] font-semibold text-[32px] -mt-28 md:-mt-0 ml-3 md:ml-0">
+                      Pengumuman Juara
                     </h3>
                     <p className="text-xl text-white font-medium italic ml-3 md:ml-0">
-                      Lomba PPL, Desain UI/UX <br />{" "}
+                      Karya Tulis Ilmiah, UI/UX, PPL <br />{" "}
                       <span className="font-light not-italic">
-                        09 November 2024
-                      </span>
-                    </p>
-                  </div>
-                  <hr
-                    className="rounded-none -mt-2 rounded-b-none bg-[#E4E4E4]"
-                    style={{
-                      width: "23px",
-                      height: "149px",
-                      zIndex: -1,
-                    }}
-                  />
-                </li>
-                <li className="font-Sarabun">
-                  <hr />
-                  <div className="timeline-middle">
-                    <div className="w-[58px] h-[58px] bg-[#E4E4E4] rounded-full -mt-4"></div>
-                  </div>
-                  <div className="timeline-end mb-10 -mt-6 ml-4">
-                    <h3 className="text-[#FFB800] font-semibold text-[32px]">
-                      Final Presentasi dan <br /> Penjurian
-                    </h3>
-                    <p className="text-xl text-white font-medium italic">
-                      Lomba Karya Tulis Ilmiah <br />{" "}
-                      <span className="font-light not-italic">
-                        16 November 2024
+                        30 November 2024
                       </span>
                     </p>
                   </div>
