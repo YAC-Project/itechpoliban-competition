@@ -61,6 +61,7 @@ function App() {
     seconds: 0,
   });
   const [selectedKategori, setSelectedKategori] = useState(null);
+  const hash = window.location.hash;
 
   const openModal = (kategori) => {
     setSelectedKategori(kategori);
@@ -110,15 +111,18 @@ function App() {
     <div>
       <header className="fixed top-0 w-full z-10">
         <ul className="hidden sm:flex w-[650px] mx-auto rounded-b-lg justify-center items-center gap-6 sm:gap-12 min-h-[68px] bg-white/10 backdrop-blur-sm backdrop-opacity-70">
-          <li className="relative after:content-[''] after:w-full after:h-0.5 after:bg-white after:absolute after:-bottom-1 after:left-0 after:transition-all after:duration-300 after:ease-in-out after:transform after:scale-x-[.6]">
-            <a href="#beranda" className="font-medium text-white">
+          <li>
+            <a
+              href="#beranda"
+              className="relative after:content-[''] after:w-full after:h-0.5 after:bg-white after:absolute after:-bottom-1 after:left-0 after:transition-all after:duration-300 after:ease-in-out after:transform after:scale-x-[.6] font-medium text-white"
+            >
               Beranda
             </a>
           </li>
           <li>
             <a
               href="#tentang"
-              className="font-light relative after:content-[''] after:w-full after:h-0.5 after:bg-white after:absolute after:-bottom-1 after:left-0 after:transition-all after:duration-300 after:ease-in-out after:transform after:scale-x-0 after:hover:scale-x-[.6] text-white"
+              className="relative after:content-[''] after:w-full after:h-0.5 after:bg-white after:absolute after:-bottom-1 after:left-0 after:transition-all after:duration-300 after:ease-in-out after:transform after:scale-x-0 after:hover:scale-x-[.6] after:hover:font-medium font-light text-white"
             >
               Tentang
             </a>
@@ -471,7 +475,7 @@ function App() {
       </section>
 
       <section id="timeline" className="scroll-mt-16">
-        <div className="mt-10 mx-10 md:mx-0">
+        <div className="mt-10 mx-4 md:mx-0">
           <h2 className="font-Sarabun font-semibold text-[36px] sm:text-[46px] md:text-[64px] text-white text-center relative after:content-[''] after:w-full after:h-0.5 after:bg-gradient-to-r after:from-[#FFB800] after:to-[#8AC7FF] after:absolute after:-bottom-3 after:left-0 after:transition-all after:duration-300 after:ease-in-out after:transform after:scale-x-[.08] mb-10 mt-5">
             Timeline
           </h2>
@@ -594,7 +598,7 @@ function App() {
                   <div className="timeline-middle">
                     <div className="w-[58px] h-[58px] bg-[#E4E4E4] rounded-full -mt-4"></div>
                   </div>
-                  <div className="timeline-end mb-10 -mt-10 ml-4">
+                  <div className="timeline-end mb-12 -mt-10 ml-4">
                     <h3 className="text-[#FFB800] font-semibold text-[32px]">
                       Final Presentasi dan <br /> Penjurian
                     </h3>
@@ -609,7 +613,7 @@ function App() {
                     className="rounded-none -mt-2 rounded-b-none bg-[#E4E4E4]"
                     style={{
                       width: "23px",
-                      height: "149px",
+                      height: "160px",
                       zIndex: -1,
                     }}
                   />
