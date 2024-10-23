@@ -39,7 +39,7 @@ const kategoris = [
     name: "Poster",
     image: posterBanner,
     link_daftar: "http://s.id/REG-IPC-2024",
-    link_pedoman: "http://s.id/REG-IPC-2024",
+    link_pedoman: "https://s.id/POSTER-IPC-2024",
   },
   {
     id: 4,
