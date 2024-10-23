@@ -11,10 +11,7 @@ import poster from "./assets/images/svg/poster.svg";
 import ppl from "./assets/images/svg/ppl.svg";
 import kti from "./assets/images/svg/kti.svg";
 import uiUx from "./assets/images/svg/ui-ux.svg";
-import pplBanner from "./assets/images/ppl-banner.jpg";
-import uiUxBanner from "./assets/images/ui-ux-banner.jpg";
 import posterBanner from "./assets/images/poster-banner.jpg";
-import ktiBanner from "./assets/images/kti-banner.jpg";
 import logoItech from "./assets/images/svg/logo-itech.svg";
 import logoPoliban from "./assets/images/svg/logo-poliban.svg";
 import discordIcon from "./assets/images/svg/discord-icon.svg";
@@ -26,16 +23,16 @@ const kategoris = [
   {
     id: 1,
     name: "Pengembangan Perangkat Lunak",
-    image: pplBanner,
-    link_daftar: "http://s.id/REG-IPC-2024",
-    link_pedoman: "http://s.id/REG-IPC-2024",
+    image: null,
+    link_daftar: "http://s.id/REG-IPC-TIM-2024",
+    link_pedoman: "http://s.id/REG-IPC-TIM-2024",
   },
   {
     id: 2,
     name: "UI/UX",
-    image: uiUxBanner,
-    link_daftar: "http://s.id/REG-IPC-2024",
-    link_pedoman: "http://s.id/REG-IPC-2024",
+    image: null,
+    link_daftar: "http://s.id/REG-IPC-TIM-2024",
+    link_pedoman: "http://s.id/REG-IPC-TIM-2024",
   },
   {
     id: 3,
@@ -47,9 +44,9 @@ const kategoris = [
   {
     id: 4,
     name: "Karya Tulis Ilmiah",
-    image: ktiBanner,
-    link_daftar: "http://s.id/REG-IPC-2024",
-    link_pedoman: "http://s.id/REG-IPC-2024",
+    image: null,
+    link_daftar: "http://s.id/REG-IPC-TIM-2024",
+    link_pedoman: "http://s.id/REG-IPC-TIM-2024",
   },
 ];
 
@@ -759,7 +756,9 @@ function App() {
           <h3 className="font-bold text-2xl font-Sarabun mb-4">
             {selectedKategori?.name}
           </h3>
-          <img src={selectedKategori?.image} alt={selectedKategori?.name} />
+          {selectedKategori?.image != null && (
+            <img src={selectedKategori?.image} alt={selectedKategori?.name} />
+          )}
           <a
             href={selectedKategori?.link_pedoman}
             target="_blank"
