@@ -11,7 +11,7 @@ import poster from "./assets/images/svg/poster.svg";
 import ppl from "./assets/images/svg/ppl.svg";
 import kti from "./assets/images/svg/kti.svg";
 import uiUx from "./assets/images/svg/ui-ux.svg";
-import posterBanner from "./assets/images/poster-banner.jpg";
+import posterBanner from "./assets/images/poster-banner.jpeg";
 import logoItech from "./assets/images/svg/logo-itech.svg";
 import logoPoliban from "./assets/images/svg/logo-poliban.svg";
 import discordIcon from "./assets/images/svg/discord-icon.svg";
@@ -39,7 +39,8 @@ const kategoris = [
     name: "Poster",
     image: posterBanner,
     link_daftar: "http://s.id/REG-IPC-2024",
-    link_pedoman: "https://s.id/POSTER-IPC-2024",
+    link_pedoman:
+      "https://drive.google.com/drive/folders/1h2RAoEjVZO3TyQ7CIKLo0fxWMcialZsi?usp=drive_link",
   },
   {
     id: 4,
@@ -67,7 +68,7 @@ function App() {
 
   useEffect(() => {
     // Set the target date for the countdown
-    const targetDate = new Date("2024-11-02 00:00:00").getTime(); // Example: December 1st, 2024
+    const targetDate = new Date("2024-11-02 23:59:59").getTime();
 
     const interval = setInterval(() => {
       const now = new Date().getTime();
