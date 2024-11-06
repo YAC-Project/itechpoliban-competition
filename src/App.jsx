@@ -68,7 +68,7 @@ function App() {
 
   useEffect(() => {
     // Set the target date for the countdown
-    const targetDate = new Date("2024-11-02 23:59:59").getTime();
+    const targetDate = new Date("2024-11-08 23:59:59").getTime();
 
     const interval = setInterval(() => {
       const now = new Date().getTime();
@@ -328,13 +328,13 @@ function App() {
           </div>
           <div className="font-Sarabun mt-[22px] flex gap-[10px] z-20">
             <a
-              href="#"
+              href="#kategori"
               className="btn px-[14px] py-[10px] bg-[#FFB800] border-none shadow-md hover:bg-[#ffc936] text-white rounded-lg"
             >
               Download Panduan
             </a>
             <a
-              href="#"
+              href="#kategori"
               className="btn bg-[#8AC7FF] px-[34px] py-[10px] text-white rounded-lg border-none shadow-md hover:bg-[#81c2ff]"
             >
               Mau Daftar
@@ -503,7 +503,7 @@ function App() {
                     <p className="text-xl text-white font-medium italic">
                       Desain Poster <br />{" "}
                       <span className="font-light not-italic">
-                        14 Oktober - 2 November 2024
+                        14 Oktober - 08 November 2024
                       </span>
                     </p>
                   </div>
