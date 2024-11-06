@@ -26,25 +26,25 @@ import uangTunai from "./assets/images/svg/uang-tunai.svg";
 const kategoris = [
   {
     id: 1,
+    name: "Poster",
+    image: posterBanner,
+    link_daftar: "http://s.id/REG-IPC-2024",
+    link_pedoman:
+      "https://drive.google.com/drive/folders/1h2RAoEjVZO3TyQ7CIKLo0fxWMcialZsi?usp=drive_link",
+  },
+  {
+    id: 2,
     name: "Pengembangan Perangkat Lunak",
     image: null,
     link_daftar: "http://s.id/REG-IPC-TIM-2024",
     link_pedoman: "http://s.id/REG-IPC-TIM-2024",
   },
   {
-    id: 2,
+    id: 3,
     name: "UI/UX",
     image: null,
     link_daftar: "http://s.id/REG-IPC-TIM-2024",
     link_pedoman: "http://s.id/REG-IPC-TIM-2024",
-  },
-  {
-    id: 3,
-    name: "Poster",
-    image: posterBanner,
-    link_daftar: "http://s.id/REG-IPC-2024",
-    link_pedoman:
-      "https://drive.google.com/drive/folders/1h2RAoEjVZO3TyQ7CIKLo0fxWMcialZsi?usp=drive_link",
   },
   {
     id: 4,
@@ -430,13 +430,9 @@ function App() {
                   onClick={() => openModal(kategoris[0])}
                   className="bg-white rounded-lg flex flex-col items-center justify-center gap-4 py-10 transition-all cursor-pointer hover:shadow-[0px_12px_40.6px_-24px_#8AC7FF,0px_12px_40.7px_-18px_#8AC7FF]"
                 >
-                  <img
-                    src={ppl}
-                    alt="Pengembangan Perangkat Lunak"
-                    className="min-h-[110px]"
-                  />
+                  <img src={poster} alt="Poster" className="min-h-[110px]" />
                   <p className="font-Sarabun font-medium text-2xl text-[#111524] text-center px-2">
-                    Pengembangan Perangkat Lunak
+                    Poster
                   </p>
                 </div>
                 <div
@@ -452,11 +448,16 @@ function App() {
                   onClick={() => openModal(kategoris[2])}
                   className="bg-white rounded-lg flex flex-col items-center justify-center gap-4 py-10 transition-all cursor-pointer hover:shadow-[0px_12px_40.6px_-24px_#8AC7FF,0px_12px_40.7px_-18px_#8AC7FF]"
                 >
-                  <img src={poster} alt="Poster" className="min-h-[110px]" />
+                  <img
+                    src={ppl}
+                    alt="Pengembangan Perangkat Lunak"
+                    className="min-h-[110px]"
+                  />
                   <p className="font-Sarabun font-medium text-2xl text-[#111524] text-center px-2">
-                    Poster
+                    Pengembangan Perangkat Lunak
                   </p>
                 </div>
+
                 <div
                   onClick={() => openModal(kategoris[3])}
                   className="bg-white rounded-lg flex flex-col items-center justify-center gap-4 py-10 transition-all cursor-pointer hover:shadow-[0px_12px_40.6px_-24px_#8AC7FF,0px_12px_40.7px_-18px_#8AC7FF]"
