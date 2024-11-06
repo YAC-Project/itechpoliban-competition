@@ -34,14 +34,14 @@ const kategoris = [
   },
   {
     id: 2,
-    name: "Pengembangan Perangkat Lunak",
+    name: "UI/UX",
     image: null,
     link_daftar: "http://s.id/REG-IPC-TIM-2024",
     link_pedoman: "http://s.id/REG-IPC-TIM-2024",
   },
   {
     id: 3,
-    name: "UI/UX",
+    name: "Pengembangan Perangkat Lunak",
     image: null,
     link_daftar: "http://s.id/REG-IPC-TIM-2024",
     link_pedoman: "http://s.id/REG-IPC-TIM-2024",
