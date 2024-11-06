@@ -18,6 +18,10 @@ import discordIcon from "./assets/images/svg/discord-icon.svg";
 import githubIcon from "./assets/images/svg/github-icon.svg";
 import instagramIcon from "./assets/images/svg/instagram-icon.svg";
 import whatsappIcon from "./assets/images/svg/whatsapp-icon.svg";
+import piala from "./assets/images/svg/piala.svg";
+import sertifikat from "./assets/images/svg/sertifikat.svg";
+import portfolio from "./assets/images/svg/portfolio.svg";
+import uangTunai from "./assets/images/svg/uang-tunai.svg";
 
 const kategoris = [
   {
@@ -417,7 +421,7 @@ function App() {
             </div>
           </div>
           <section id="kategori" className="z-10 scroll-mt-16">
-            <div className="mt-20 md:mt-0 mx-10 md:mx-[105px] pb-10">
+            <div className="mt-20 md:mt-0 mx-10 md:mx-[105px] md:pb-4">
               <h2 className="font-Sarabun font-semibold text-[36px] sm:text-[46px] md:text-[64px] text-white text-center relative after:content-[''] after:w-full after:h-0.5 after:bg-gradient-to-r after:from-[#FFB800] after:to-[#8AC7FF] after:absolute after:-bottom-3 after:left-0 after:transition-all after:duration-300 after:ease-in-out after:transform after:scale-x-[.12] mb-10 mt-5">
                 Kategori Lomba
               </h2>
@@ -464,6 +468,59 @@ function App() {
                   />
                   <p className="font-Sarabun font-medium text-2xl text-[#111524] text-center px-2">
                     Karya Tulis Ilmiah
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section id="penghargaan" className="z-10 scroll-mt-16">
+            <div className="mt-20 md:mt-0 mx-10 md:mx-[105px] pb-10">
+              <h2 className="font-Sarabun font-semibold text-[36px] sm:text-[46px] md:text-[64px] text-white text-center relative after:content-[''] after:w-full after:h-0.5 after:bg-gradient-to-r after:from-[#FFB800] after:to-[#8AC7FF] after:absolute after:-bottom-3 after:left-0 after:transition-all after:duration-300 after:ease-in-out after:transform after:scale-x-[.12] mb-10 mt-5">
+                Bentuk Penghargaan
+              </h2>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 my-14">
+                <div className="bg-white rounded-lg flex flex-col items-center justify-center gap-3 py-10 transition-all cursor-pointer hover:shadow-[0px_12px_40.6px_-24px_#8AC7FF,0px_12px_40.7px_-18px_#8AC7FF]">
+                  <img src={piala} alt="Piala" className="h-[141px]" />
+                  <p className="font-Sarabun font-bold text-3xl text-[#0F1113] text-center px-2">
+                    Piala
+                  </p>
+                  <p className="text-[#0F1113] text-center px-4 md:px-2 text-sm">
+                    Bagi Pemenang akan mendapatkan Piala pada masing-masing
+                    kategori lomba
+                  </p>
+                </div>
+                <div className="bg-white rounded-lg flex flex-col items-center justify-center gap-3 py-10 transition-all cursor-pointer hover:shadow-[0px_12px_40.6px_-24px_#8AC7FF,0px_12px_40.7px_-18px_#8AC7FF]">
+                  <img
+                    src={sertifikat}
+                    alt="Sertifikat"
+                    className="h-[141px]"
+                  />
+                  <p className="font-Sarabun font-bold text-3xl text-[#0F1113] text-center px-2">
+                    Sertifikat
+                  </p>
+                  <p className="text-[#0F1113] text-center px-4 md:px-2 text-sm">
+                    Peserta akan menerima sertifikat sebagai bukti partisipasi
+                    dalam lomba.
+                  </p>
+                </div>
+                <div className="bg-white rounded-lg flex flex-col items-center justify-center gap-3 py-10 transition-all cursor-pointer hover:shadow-[0px_12px_40.6px_-24px_#8AC7FF,0px_12px_40.7px_-18px_#8AC7FF]">
+                  <img src={uangTunai} alt="Uang Tunai" className="h-[141px]" />
+                  <p className="font-Sarabun font-bold text-3xl text-[#0F1113] text-center px-2">
+                    Uang Tunai
+                  </p>
+                  <p className="text-[#0F1113] text-center px-4 md:px-2 text-sm">
+                    Bagi Pemenang akan mendapatkan Uang Tunai pada masing-masing
+                    kategori lomba
+                  </p>
+                </div>
+                <div className="bg-white rounded-lg flex flex-col items-center justify-center gap-3 py-10 transition-all cursor-pointer hover:shadow-[0px_12px_40.6px_-24px_#8AC7FF,0px_12px_40.7px_-18px_#8AC7FF]">
+                  <img src={portfolio} alt="Portofolio" className="h-[141px]" />
+                  <p className="font-Sarabun font-bold text-3xl text-[#0F1113] text-center px-2">
+                    Portofolio
+                  </p>
+                  <p className="text-[#0F1113] text-center px-4 md:px-2 text-sm">
+                    Tak cuma pengalaman yang didapat, peserta juga bisa
+                    menambahkan karyanya menjadi Portofolio
                   </p>
                 </div>
               </div>
