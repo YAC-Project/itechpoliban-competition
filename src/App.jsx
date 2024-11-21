@@ -22,6 +22,8 @@ import piala from "./assets/images/svg/piala.svg";
 import sertifikat from "./assets/images/svg/sertifikat.svg";
 import portfolio from "./assets/images/svg/portfolio.svg";
 import uangTunai from "./assets/images/svg/uang-tunai.svg";
+import uiuxpplktiBanner from "./assets/images/uiux_ppl_kti.jpeg";
+import tick from "./assets/images/svg/tick.svg";
 
 const kategoris = [
   {
@@ -35,21 +37,21 @@ const kategoris = [
   {
     id: 2,
     name: "UI/UX",
-    image: null,
+    image: uiuxpplktiBanner,
     link_daftar: "http://s.id/REG-IPC-TIM-2024",
     link_pedoman: "http://s.id/REG-IPC-TIM-2024",
   },
   {
     id: 3,
     name: "Pengembangan Perangkat Lunak",
-    image: null,
+    image: uiuxpplktiBanner,
     link_daftar: "http://s.id/REG-IPC-TIM-2024",
     link_pedoman: "http://s.id/REG-IPC-TIM-2024",
   },
   {
     id: 4,
     name: "Karya Tulis Ilmiah",
-    image: null,
+    image: uiuxpplktiBanner,
     link_daftar: "http://s.id/REG-IPC-TIM-2024",
     link_pedoman: "http://s.id/REG-IPC-TIM-2024",
   },
@@ -72,7 +74,7 @@ function App() {
 
   useEffect(() => {
     // Set the target date for the countdown
-    const targetDate = new Date("2024-11-08 23:59:59").getTime();
+    const targetDate = new Date("2024-11-29 23:59:59").getTime();
 
     const interval = setInterval(() => {
       const now = new Date().getTime();
@@ -427,9 +429,19 @@ function App() {
               </h2>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-14 my-14">
                 <div
-                  onClick={() => openModal(kategoris[0])}
-                  className="bg-white rounded-lg flex flex-col items-center justify-center gap-4 py-10 transition-all cursor-pointer hover:shadow-[0px_12px_40.6px_-24px_#8AC7FF,0px_12px_40.7px_-18px_#8AC7FF]"
+                  // onClick={() => openModal(kategoris[0])}
+                  className="bg-white rounded-lg flex flex-col items-center justify-center gap-4 py-10 transition-all cursor-pointer hover:shadow-[0px_12px_40.6px_-24px_#8AC7FF,0px_12px_40.7px_-18px_#8AC7FF] relative"
                 >
+                  <div className="absolute top-0 right-0 left-0 bottom-0 bg-gray-800/90 rounded-md flex flex-col justify-center items-center">
+                    <span className="text-white font-bold text-5xl">
+                      SELESAI
+                    </span>
+                    <img
+                      src={tick}
+                      alt="Selesai"
+                      className="w-[80px] h-[80px]"
+                    />
+                  </div>
                   <img src={poster} alt="Poster" className="min-h-[110px]" />
                   <p className="font-Sarabun font-medium text-2xl text-[#111524] text-center px-2">
                     Poster
@@ -552,7 +564,7 @@ function App() {
                 <li className="font-Sarabun">
                   <hr />
                   <div className="timeline-middle">
-                    <div className="w-[58px] h-[58px] bg-[#FFB800] rounded-full -mt-4 animate-kedapKedip"></div>
+                    <div className="w-[58px] h-[58px] bg-[#FFB800] rounded-full -mt-4"></div>
                   </div>
                   <div className="timeline-end mb-10 -mt-20 ml-4">
                     <h3 className="text-[#FFB800] font-semibold text-[32px]">
@@ -566,7 +578,7 @@ function App() {
                     </p>
                   </div>
                   <hr
-                    className="rounded-none -mt-2 rounded-b-none bg-[#E4E4E4]"
+                    className="rounded-none -mt-2 rounded-b-none bg-[#FFB800]"
                     style={{
                       width: "23px",
                       height: "149px",
@@ -577,7 +589,7 @@ function App() {
                 <li className="font-Sarabun">
                   <hr />
                   <div className="timeline-middle">
-                    <div className="w-[58px] h-[58px] bg-[#E4E4E4] rounded-full -mt-4"></div>
+                    <div className="w-[58px] h-[58px] bg-[#FFB800] rounded-full -mt-4"></div>
                   </div>
                   <div className="timeline-start mb-10 -mt-20 mr-4">
                     <h3 className="text-[#FFB800] font-semibold text-[32px] -mt-28 md:-mt-0 ml-3 md:ml-0">
@@ -591,7 +603,7 @@ function App() {
                     </p>
                   </div>
                   <hr
-                    className="rounded-none -mt-2 rounded-b-none bg-[#E4E4E4]"
+                    className="rounded-none -mt-2 rounded-b-none bg-[#FFB800]"
                     style={{
                       width: "23px",
                       height: "149px",
@@ -602,7 +614,7 @@ function App() {
                 <li className="font-Sarabun">
                   <hr />
                   <div className="timeline-middle">
-                    <div className="w-[58px] h-[58px] bg-[#E4E4E4] rounded-full -mt-4"></div>
+                    <div className="w-[58px] h-[58px] bg-[#FFB800] rounded-full -mt-4 animate-kedapKedip"></div>
                   </div>
                   <div className="timeline-end mb-10 -mt-20 ml-4">
                     <h3 className="text-[#FFB800] font-semibold text-[32px]">
@@ -611,7 +623,7 @@ function App() {
                     <p className="text-xl text-white font-medium italic">
                       Karya Tulis Ilmiah, UI/UX, PPL <br />{" "}
                       <span className="font-light not-italic">
-                        14 Oktober - 10 November 2024
+                        20 November - 29 November 2024
                       </span>
                     </p>
                   </div>
@@ -636,7 +648,7 @@ function App() {
                     <p className="text-xl text-white font-medium italic ml-3 md:ml-0">
                       Karya Tulis Ilmiah, UI/UX, PPL <br />{" "}
                       <span className="font-light not-italic">
-                        17 November 2024
+                        02 Desember 2024
                       </span>
                     </p>
                   </div>
@@ -661,7 +673,7 @@ function App() {
                     <p className="text-xl text-white font-medium italic">
                       Karya Tulis Ilmiah, UI/UX, PPL <br />{" "}
                       <span className="font-light not-italic">
-                        21 November 2024
+                        03 November - 05 November 2024
                       </span>
                     </p>
                   </div>
@@ -686,7 +698,7 @@ function App() {
                     <p className="text-xl text-white font-medium italic ml-3 md:ml-0">
                       Karya Tulis Ilmiah, UI/UX, PPL <br />{" "}
                       <span className="font-light not-italic">
-                        30 November 2024
+                        07 Desember 2024
                       </span>
                     </p>
                   </div>
