@@ -38,7 +38,7 @@ const kategoris = [
     id: 2,
     name: "UI/UX",
     image: uiuxpplktiBanner,
-    link_daftar: "http://s.id/REG-IPC-TIM-2024",
+    link_daftar: "https://s.id/REG-UIUX-IPC2024",
     link_pedoman: "http://s.id/REG-IPC-TIM-2024",
   },
   {
@@ -673,7 +673,7 @@ function App() {
                     <p className="text-xl text-white font-medium italic">
                       Karya Tulis Ilmiah, UI/UX, PPL <br />{" "}
                       <span className="font-light not-italic">
-                        03 November - 05 November 2024
+                        03 Desember - 05 Desember 2024
                       </span>
                     </p>
                   </div>
