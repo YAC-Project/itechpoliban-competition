@@ -39,21 +39,24 @@ const kategoris = [
     name: "UI/UX",
     image: uiuxpplktiBanner,
     link_daftar: "https://s.id/REG-UIUX-IPC2024",
-    link_pedoman: "http://s.id/REG-IPC-TIM-2024",
+    link_pedoman:
+      "https://drive.google.com/drive/folders/1BJ4CQxBUKFOM8QmMcTCbhj1Gx16OVt6W?usp=sharing",
   },
   {
     id: 3,
     name: "Pengembangan Perangkat Lunak",
     image: uiuxpplktiBanner,
-    link_daftar: "http://s.id/REG-IPC-TIM-2024",
-    link_pedoman: "http://s.id/REG-IPC-TIM-2024",
+    link_daftar: "https://s.id/REG-PPL-IPC2024",
+    link_pedoman:
+      "https://drive.google.com/drive/folders/1yPoS_inHVUeM_Uyh1NbxMJnDmpDaglKD?usp=sharing",
   },
   {
     id: 4,
     name: "Karya Tulis Ilmiah",
     image: uiuxpplktiBanner,
-    link_daftar: "http://s.id/REG-IPC-TIM-2024",
-    link_pedoman: "http://s.id/REG-IPC-TIM-2024",
+    link_daftar: "https://s.id/REG-KTI-IPC2024",
+    link_pedoman:
+      "https://drive.google.com/drive/folders/1BJ4CQxBUKFOM8QmMcTCbhj1Gx16OVt6W?usp=sharing",
   },
 ];
 
