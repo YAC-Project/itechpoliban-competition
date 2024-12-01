@@ -77,7 +77,7 @@ function App() {
 
   useEffect(() => {
     // Set the target date for the countdown
-    const targetDate = new Date("2024-11-29 23:59:59").getTime();
+    const targetDate = new Date("2024-12-03 23:59:59").getTime();
 
     const interval = setInterval(() => {
       const now = new Date().getTime();
@@ -626,7 +626,7 @@ function App() {
                     <p className="text-xl text-white font-medium italic">
                       Karya Tulis Ilmiah, UI/UX, PPL <br />{" "}
                       <span className="font-light not-italic">
-                        20 November - 29 November 2024
+                        18 November - 03 Desember 2024
                       </span>
                     </p>
                   </div>
@@ -651,7 +651,7 @@ function App() {
                     <p className="text-xl text-white font-medium italic ml-3 md:ml-0">
                       Karya Tulis Ilmiah, UI/UX, PPL <br />{" "}
                       <span className="font-light not-italic">
-                        02 Desember 2024
+                        04 Desember 2024
                       </span>
                     </p>
                   </div>
@@ -676,7 +676,7 @@ function App() {
                     <p className="text-xl text-white font-medium italic">
                       Karya Tulis Ilmiah, UI/UX, PPL <br />{" "}
                       <span className="font-light not-italic">
-                        03 Desember - 05 Desember 2024
+                        05 Desember 2024
                       </span>
                     </p>
                   </div>
