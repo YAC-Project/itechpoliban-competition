@@ -22,7 +22,8 @@ import piala from "./assets/images/svg/piala.svg";
 import sertifikat from "./assets/images/svg/sertifikat.svg";
 import portfolio from "./assets/images/svg/portfolio.svg";
 import uangTunai from "./assets/images/svg/uang-tunai.svg";
-import uiuxpplktiBanner from "./assets/images/uiux_ppl_kti.jpeg";
+import uiuxpplktiBanner from "./assets/images/UI-UX.jpg";
+import ktiBanner from "./assets/images/KTI.jpg";
 import tick from "./assets/images/svg/tick.svg";
 
 const kategoris = [
@@ -36,14 +37,6 @@ const kategoris = [
   },
   {
     id: 2,
-    name: "UI/UX",
-    image: uiuxpplktiBanner,
-    link_daftar: "https://s.id/REG-UIUX-IPC2024",
-    link_pedoman:
-      "https://drive.google.com/drive/folders/1BJ4CQxBUKFOM8QmMcTCbhj1Gx16OVt6W?usp=sharing",
-  },
-  {
-    id: 3,
     name: "Pengembangan Perangkat Lunak",
     image: uiuxpplktiBanner,
     link_daftar: "https://s.id/REG-PPL-IPC2024",
@@ -51,9 +44,17 @@ const kategoris = [
       "https://drive.google.com/drive/folders/1yPoS_inHVUeM_Uyh1NbxMJnDmpDaglKD?usp=sharing",
   },
   {
+    id: 3,
+    name: "UI/UX",
+    image: uiuxpplktiBanner,
+    link_daftar: "https://s.id/REG-UIUX-IPC2024",
+    link_pedoman:
+      "https://drive.google.com/drive/folders/1BJ4CQxBUKFOM8QmMcTCbhj1Gx16OVt6W?usp=sharing",
+  },
+  {
     id: 4,
     name: "Karya Tulis Ilmiah",
-    image: uiuxpplktiBanner,
+    image: ktiBanner,
     link_daftar: "https://s.id/REG-KTI-IPC2024",
     link_pedoman:
       "https://drive.google.com/drive/folders/1BJ4CQxBUKFOM8QmMcTCbhj1Gx16OVt6W?usp=sharing",
@@ -454,15 +455,6 @@ function App() {
                   onClick={() => openModal(kategoris[1])}
                   className="bg-white rounded-lg flex flex-col items-center justify-center gap-4 py-10 transition-all cursor-pointer hover:shadow-[0px_12px_40.6px_-24px_#8AC7FF,0px_12px_40.7px_-18px_#8AC7FF]"
                 >
-                  <img src={uiUx} alt="UI/UX" className="min-h-[110px]" />
-                  <p className="font-Sarabun font-medium text-2xl text-[#111524] text-center px-2">
-                    UI/UX
-                  </p>
-                </div>
-                <div
-                  onClick={() => openModal(kategoris[2])}
-                  className="bg-white rounded-lg flex flex-col items-center justify-center gap-4 py-10 transition-all cursor-pointer hover:shadow-[0px_12px_40.6px_-24px_#8AC7FF,0px_12px_40.7px_-18px_#8AC7FF]"
-                >
                   <img
                     src={ppl}
                     alt="Pengembangan Perangkat Lunak"
@@ -470,6 +462,15 @@ function App() {
                   />
                   <p className="font-Sarabun font-medium text-2xl text-[#111524] text-center px-2">
                     Pengembangan Perangkat Lunak
+                  </p>
+                </div>
+                <div
+                  onClick={() => openModal(kategoris[2])}
+                  className="bg-white rounded-lg flex flex-col items-center justify-center gap-4 py-10 transition-all cursor-pointer hover:shadow-[0px_12px_40.6px_-24px_#8AC7FF,0px_12px_40.7px_-18px_#8AC7FF]"
+                >
+                  <img src={uiUx} alt="UI/UX" className="min-h-[110px]" />
+                  <p className="font-Sarabun font-medium text-2xl text-[#111524] text-center px-2">
+                    UI/UX
                   </p>
                 </div>
 
