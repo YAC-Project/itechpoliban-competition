@@ -24,6 +24,7 @@ import portfolio from "./assets/images/svg/portfolio.svg";
 import uangTunai from "./assets/images/svg/uang-tunai.svg";
 import uiuxpplktiBanner from "./assets/images/UI-UX.jpg";
 import ktiBanner from "./assets/images/KTI.jpg";
+import pplBanner from "./assets/images/ppl-banner.jpg";
 import tick from "./assets/images/svg/tick.svg";
 
 const kategoris = [
@@ -38,7 +39,7 @@ const kategoris = [
   {
     id: 2,
     name: "Pengembangan Perangkat Lunak",
-    image: uiuxpplktiBanner,
+    image: pplBanner,
     link_daftar: "https://s.id/REG-PPL-IPC2024",
     link_pedoman:
       "https://drive.google.com/drive/folders/1yPoS_inHVUeM_Uyh1NbxMJnDmpDaglKD?usp=sharing",
