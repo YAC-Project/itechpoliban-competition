@@ -453,9 +453,19 @@ function App() {
                   </p>
                 </div>
                 <div
-                  onClick={() => openModal(kategoris[1])}
-                  className="bg-white rounded-lg flex flex-col items-center justify-center gap-4 py-10 transition-all cursor-pointer hover:shadow-[0px_12px_40.6px_-24px_#8AC7FF,0px_12px_40.7px_-18px_#8AC7FF]"
+                  // onClick={() => openModal(kategoris[1])}
+                  className="bg-white rounded-lg flex flex-col items-center justify-center gap-4 py-10 transition-all cursor-pointer hover:shadow-[0px_12px_40.6px_-24px_#8AC7FF,0px_12px_40.7px_-18px_#8AC7FF] relative"
                 >
+                  <div className="absolute top-0 right-0 left-0 bottom-0 bg-gray-800/90 rounded-md flex flex-col justify-center items-center">
+                    <span className="text-white font-bold text-5xl">
+                      SELESAI
+                    </span>
+                    <img
+                      src={tick}
+                      alt="Selesai"
+                      className="w-[80px] h-[80px]"
+                    />
+                  </div>
                   <img
                     src={ppl}
                     alt="Pengembangan Perangkat Lunak"
@@ -466,9 +476,19 @@ function App() {
                   </p>
                 </div>
                 <div
-                  onClick={() => openModal(kategoris[2])}
-                  className="bg-white rounded-lg flex flex-col items-center justify-center gap-4 py-10 transition-all cursor-pointer hover:shadow-[0px_12px_40.6px_-24px_#8AC7FF,0px_12px_40.7px_-18px_#8AC7FF]"
+                  // onClick={() => openModal(kategoris[2])}
+                  className="bg-white rounded-lg flex flex-col items-center justify-center gap-4 py-10 transition-all cursor-pointer hover:shadow-[0px_12px_40.6px_-24px_#8AC7FF,0px_12px_40.7px_-18px_#8AC7FF] relative"
                 >
+                  <div className="absolute top-0 right-0 left-0 bottom-0 bg-gray-800/90 rounded-md flex flex-col justify-center items-center">
+                    <span className="text-white font-bold text-5xl">
+                      SELESAI
+                    </span>
+                    <img
+                      src={tick}
+                      alt="Selesai"
+                      className="w-[80px] h-[80px]"
+                    />
+                  </div>
                   <img src={uiUx} alt="UI/UX" className="min-h-[110px]" />
                   <p className="font-Sarabun font-medium text-2xl text-[#111524] text-center px-2">
                     UI/UX
@@ -476,9 +496,19 @@ function App() {
                 </div>
 
                 <div
-                  onClick={() => openModal(kategoris[3])}
-                  className="bg-white rounded-lg flex flex-col items-center justify-center gap-4 py-10 transition-all cursor-pointer hover:shadow-[0px_12px_40.6px_-24px_#8AC7FF,0px_12px_40.7px_-18px_#8AC7FF]"
+                  // onClick={() => openModal(kategoris[3])}
+                  className="bg-white rounded-lg flex flex-col items-center justify-center gap-4 py-10 transition-all cursor-pointer hover:shadow-[0px_12px_40.6px_-24px_#8AC7FF,0px_12px_40.7px_-18px_#8AC7FF] relative"
                 >
+                  <div className="absolute top-0 right-0 left-0 bottom-0 bg-gray-800/90 rounded-md flex flex-col justify-center items-center">
+                    <span className="text-white font-bold text-5xl">
+                      SELESAI
+                    </span>
+                    <img
+                      src={tick}
+                      alt="Selesai"
+                      className="w-[80px] h-[80px]"
+                    />
+                  </div>
                   <img
                     src={kti}
                     alt="Karya Tulis Ilmiah"
@@ -619,7 +649,7 @@ function App() {
                 <li className="font-Sarabun">
                   <hr />
                   <div className="timeline-middle">
-                    <div className="w-[58px] h-[58px] bg-[#FFB800] rounded-full -mt-4 animate-kedapKedip"></div>
+                    <div className="w-[58px] h-[58px] bg-[#FFB800] rounded-full -mt-4"></div>
                   </div>
                   <div className="timeline-end mb-10 -mt-20 ml-4">
                     <h3 className="text-[#FFB800] font-semibold text-[32px]">
@@ -633,7 +663,7 @@ function App() {
                     </p>
                   </div>
                   <hr
-                    className="rounded-none -mt-2 rounded-b-none bg-[#E4E4E4]"
+                    className="rounded-none -mt-2 rounded-b-none bg-[#FFB800]"
                     style={{
                       width: "23px",
                       height: "149px",
@@ -644,7 +674,7 @@ function App() {
                 <li className="font-Sarabun">
                   <hr />
                   <div className="timeline-middle">
-                    <div className="w-[58px] h-[58px] bg-[#E4E4E4] rounded-full -mt-4"></div>
+                    <div className="w-[58px] h-[58px] bg-[#FFB800] rounded-full -mt-4"></div>
                   </div>
                   <div className="timeline-start mb-10 -mt-20 mr-4">
                     <h3 className="text-[#FFB800] font-semibold text-[32px] -mt-28 ml-3 md:-mt-0 md:ml-0">
@@ -658,7 +688,7 @@ function App() {
                     </p>
                   </div>
                   <hr
-                    className="rounded-none -mt-2 rounded-b-none bg-[#E4E4E4]"
+                    className="rounded-none -mt-2 rounded-b-none bg-[#FFB800]"
                     style={{
                       width: "23px",
                       height: "149px",
@@ -669,7 +699,7 @@ function App() {
                 <li className="font-Sarabun">
                   <hr />
                   <div className="timeline-middle">
-                    <div className="w-[58px] h-[58px] bg-[#E4E4E4] rounded-full -mt-4"></div>
+                    <div className="w-[58px] h-[58px] bg-[#FFB800] rounded-full -mt-4"></div>
                   </div>
                   <div className="timeline-end mb-12 -mt-10 ml-4">
                     <h3 className="text-[#FFB800] font-semibold text-[32px]">
@@ -683,7 +713,7 @@ function App() {
                     </p>
                   </div>
                   <hr
-                    className="rounded-none -mt-2 rounded-b-none bg-[#E4E4E4]"
+                    className="rounded-none -mt-2 rounded-b-none bg-[#FFB800]"
                     style={{
                       width: "23px",
                       height: "160px",
@@ -694,7 +724,7 @@ function App() {
                 <li className="font-Sarabun">
                   <hr />
                   <div className="timeline-middle">
-                    <div className="w-[58px] h-[58px] bg-[#E4E4E4] rounded-full -mt-4"></div>
+                    <div className="w-[58px] h-[58px] bg-[#FFB800] rounded-full -mt-4"></div>
                   </div>
                   <div className="timeline-start mb-10 -mt-24 mr-4">
                     <h3 className="text-[#FFB800] font-semibold text-[32px] -mt-28 md:-mt-0 ml-3 md:ml-0">
@@ -708,7 +738,7 @@ function App() {
                     </p>
                   </div>
                   <hr
-                    className="rounded-t-none rounded-b-[5px] -mt-2 bg-[#E4E4E4]"
+                    className="rounded-t-none rounded-b-[5px] -mt-2 bg-[#FFB800]"
                     style={{
                       width: "23px",
                       height: "149px",
